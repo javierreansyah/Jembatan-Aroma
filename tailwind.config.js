@@ -14,6 +14,13 @@ export default {
         "wb-orangeyellow": "#FF9A00",
         "wb-yellow": "#FFC100",
       },
+      backgroundImage: {
+        deskripsi: "url('./assets/images/deskripsi.jpg')",
+      },
+      spacing: {
+        "wb-screen": "75rem",
+        "wb-30": "32rem",
+      },
     },
   },
   plugins: [require("@tailwindcss/forms")],
