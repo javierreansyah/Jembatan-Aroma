@@ -19,7 +19,11 @@ export default {
       },
       spacing: {
         "wb-screen": "75rem",
+        "wb-42": "42rem",
         "wb-30": "32rem",
+      },
+      container: {
+        center: true,
       },
     },
   },

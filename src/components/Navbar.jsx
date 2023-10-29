@@ -11,23 +11,25 @@ const Navbar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
   return (
-    <div className="">
-      <nav className="fixed top-0 flex h-16 w-full items-center justify-between bg-white shadow-md">
-        <Link className="ml-8 md:ml-16">
-          <img src={Logo} alt="Logo" className="h-8" />
-        </Link>
-
-        <div className="mr-8 flex items-center md:mr-16">
-          <Link className="mr-3 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white">
-            Masuk
+    <div>
+      <nav className="fixed top-0 w-full bg-white shadow-md">
+        <div className="container flex h-16 items-center justify-between px-8">
+          <Link>
+            <img src={Logo} alt="Logo" className="h-8" />
           </Link>
-          <button
-            className="flex items-center rounded-full border-2 border-wb-redorange px-4 py-1 text-sm font-semibold text-wb-redorange"
-            onClick={toggleSidebar}
-          >
-            <p className="mr-2">Menu</p>
-            <Menu />
-          </button>
+
+          <div className="flex items-center">
+            <Link className="mr-3 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white">
+              Masuk
+            </Link>
+            <button
+              className="flex items-center rounded-full border-2 border-wb-redorange px-4 py-1 text-sm font-semibold text-wb-redorange"
+              onClick={toggleSidebar}
+            >
+              <p className="mr-2">Menu</p>
+              <Menu />
+            </button>
+          </div>
         </div>
       </nav>
       <Sidebar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
