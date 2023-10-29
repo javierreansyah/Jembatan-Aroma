@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="">
       <div className="container my-20 px-12 pb-8">
-        <div className="mt-10 flex items-center justify-between gap-20">
+        <div className="flex items-center justify-between gap-20">
           <div className="">
             <h1 className="max-w-md text-4xl font-bold text-wb-yellow md:max-w-xl lg:text-6xl">
               Berbagi Bersama Kepada Yang Membutuhkan
@@ -31,7 +31,7 @@ const Home = () => {
             </div>
           </div>
           <div className="hidden md:block">
-            <img src={HomeImage} alt="HomeImage" className="max-h-wb-42" />
+            <img src={HomeImage} alt="HomeImage" className="max-h-wb-30" />
           </div>
         </div>
       </div>
