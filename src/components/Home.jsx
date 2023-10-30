@@ -5,7 +5,7 @@ import HomeImage from "../assets/images/home.jpg";
 const Home = () => {
   return (
     <div>
-      <div className="container bg-slate-300 px-8 md:px-12">
+      <div className="container">
         <div className="items-center py-10 md:py-32 lg:flex lg:justify-between lg:gap-20">
           <div>
             <h1 className="md:max-w-xl/[72px] max-w-md text-4xl font-bold text-wb-yellow md:text-5xl lg:max-w-2xl xl:text-6xl/[72px]">
@@ -38,7 +38,7 @@ const Home = () => {
       </div>
 
       <div className="h-wb-42 bg-deskripsi bg-cover bg-center">
-        <div className="container px-8 py-8">
+        <div className="container py-8">
           <h1 className="max-w-md text-4xl font-bold text-wb-white">
             Berbagi Sangat Berharga Bagi Mereka
           </h1>

@@ -1,44 +1,41 @@
 import React from "react";
+import { Input, Select } from "./index";
 
 const SignUp = () => {
-  const SignUpForm = ({ id, type, placeholder, label, props }) => {
-    return (
-      <div className="">
-        <div className="my-3 flex-1">
-          <label id={id} className="text-sm font-semibold text-wb-gray">
-            {label}
-          </label>
-          <input
-            id={id}
-            name={id}
-            type={type}
-            placeholder={placeholder}
-            className="mt-2 block w-full rounded-lg border-2 border-gray-200 text-wb-gray hover:border-gray-400 focus:border-gray-400 focus:border-wb-yellow  focus:ring-1 focus:ring-wb-yellow"
-            {...props}
-          ></input>
+  const orgSelectOption = [
+    { value: "restoran", label: "Restoran" },
+    { value: "yayasan", label: "Yayasan" },
+  ];
+  return (
+    <div className="container h-44">
+      <div className="my-4 flex justify-between gap-3 rounded-2xl bg-wb-lightgray p-2">
+        <div className="flex-1 rounded-xl bg-wb-red px-2 py-2 text-center text-xs font-bold text-wb-white lg:text-sm">
+          Informasi Lembaga
+        </div>
+        <div className="bg-wb-lightgray2 flex-1 rounded-xl px-2 py-2 text-center text-xs font-bold text-wb-gray lg:text-sm">
+          Identitas Pengelola
+        </div>
+        <div className="bg-wb-lightgray2 flex-1 rounded-xl px-2 py-2 text-center text-xs font-bold text-wb-gray lg:text-sm">
+          Sertifikat
         </div>
       </div>
-    );
-  };
-  return (
-    <div className="container h-44 w-full px-8 md:px-12">
+
       <div className="h-screen rounded-2xl bg-wb-lightgray p-8">
         <h1 className="text-3xl font-bold text-wb-gray">
           Isikan Informasi Lembaga Anda
         </h1>
-        <div className="my-4 w-full border-b-2 border-gray-200 text-wb-gray"></div>
+        <hr className="my-4 w-full border-t border-gray-200" />
         <form>
-          <SignUpForm
+          <Input
             id="org-name"
             type="text"
             placeholder="Nama Lembaga"
             label="Nama Lembaga"
           />
-          <SignUpForm
-            id="org-name"
-            type="text"
-            placeholder="Nama Lembaga"
-            label="Nama Lembaga"
+          <Select
+            id="jenis-lembaga"
+            label="Daftar Sebagai"
+            options={orgSelectOption}
           />
         </form>
       </div>

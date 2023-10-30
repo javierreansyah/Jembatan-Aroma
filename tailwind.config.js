@@ -7,6 +7,7 @@ export default {
         "wb-black": "#1F1F1F",
         "wb-gray": "#404040",
         "wb-lightgray": "#F3F3F3",
+        "wb-lightgray2": "#E6E6E6",
         "wb-white": "#FDFDFD",
         "wb-red": "#FF0000",
         "wb-redorange": "#FF4D00",
@@ -24,6 +25,13 @@ export default {
       },
       container: {
         center: true,
+        padding: {
+          DEFAULT: "2rem",
+          sm: "3rem",
+          lg: "4rem",
+          xl: "5rem",
+          "2xl": "6rem",
+        },
       },
     },
   },

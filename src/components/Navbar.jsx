@@ -11,9 +11,9 @@ const Navbar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
   return (
-    <div>
+    <>
       <nav className="fixed top-0 w-full bg-white">
-        <div className="container flex h-20 items-center justify-between px-8 md:px-12">
+        <div className="container flex h-20 items-center justify-between">
           <Link to="/">
             <img src={Logo} alt="Logo" className="h-8" />
           </Link>
@@ -39,7 +39,7 @@ const Navbar = () => {
       </nav>
       <Sidebar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
       <div className="h-20"></div>
-    </div>
+    </>
   );
 };
 
