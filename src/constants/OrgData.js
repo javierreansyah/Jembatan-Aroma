@@ -1,6 +1,7 @@
 import {
   yayasanabdulbari,
   yayasanlolipon,
+  yayasanmanarulhuda, 
 } from "../assets/images/org-photos/orgPhotoIndex.js";
 
 const orgData = [
@@ -22,6 +23,15 @@ const orgData = [
     halal: "Halal",
     img: yayasanabdulbari,
   },
+  {
+    id: 3,
+    name: "Yayasan Manarul Huda",
+    alamat: "Jl. Sumbersari III No.235",
+    kategori: "Panti Asuhan",
+    status: "Membutuhkan",
+    halal: "Halal",
+    img: yayasanmanarulhuda,
+  }
 ];
 
 export default orgData;
