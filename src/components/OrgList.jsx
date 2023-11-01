@@ -1,5 +1,5 @@
 import React from "react";
-import OrgData from "../constants/OrgData.js";
+import orgData from "../constants/orgData.js";
 import poto from "../assets/images/org-photos/yayasanabdulbari.jpg";
 
 const OrgList = () => {
@@ -7,7 +7,7 @@ const OrgList = () => {
     <div>
       <h1>Organization List</h1>
       <ul>
-        {OrgData.map((org) => (
+        {orgData.map((org) => (
           <li key={org.id}>
             <h2>{org.name}</h2>
             <p>Alamat: {org.alamat}</p>

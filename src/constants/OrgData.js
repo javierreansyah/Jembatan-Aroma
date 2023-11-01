@@ -1,6 +1,6 @@
 import { yayasanabdulbari } from "../assets/images/org-photos/orgPhotoIndex.js";
 
-const OrgData = [
+const orgData = [
   {
     id: 1,
     name: "Yayasan Abdul Bari",
@@ -21,4 +21,4 @@ const OrgData = [
   },
 ];
 
-export default OrgData;
+export default orgData;
