@@ -1,4 +1,7 @@
-import { yayasanabdulbari } from "../assets/images/org-photos/orgPhotoIndex.js";
+import {
+  yayasanabdulbari,
+  yayasanlolipon,
+} from "../assets/images/org-photos/orgPhotoIndex.js";
 
 const orgData = [
   {

@@ -4,7 +4,7 @@ import HomeImage from "../assets/images/home.jpg";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <div className="container">
         <div className="items-center py-10 md:py-32 lg:flex lg:justify-between lg:gap-20">
           <div>
@@ -45,7 +45,7 @@ const Home = () => {
         </div>
       </div>
       <div className="h-wb-screen"></div>
-    </div>
+    </>
   );
 };
 
