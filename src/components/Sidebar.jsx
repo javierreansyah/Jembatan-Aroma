@@ -43,6 +43,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
             <SidebarLink to="/" text="Tentang" />
             <SidebarLink to="/" text="Donatur" />
             <SidebarLink to="/" text="Pusat Bantuan" />
+            <SidebarLink to="/yayasan" text="Yayasan" />
             <div className="w-full border-b-2 border-gray-200 text-wb-gray"></div>
           </div>
         </div>

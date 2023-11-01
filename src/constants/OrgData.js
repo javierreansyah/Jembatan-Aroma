@@ -1,4 +1,4 @@
-import { yayasanabdulbari } from "../assets/images/org-photo/yayasanabdulbari.jpg";
+import { yayasanabdulbari } from "../assets/images/org-photos/orgPhotoIndex.js";
 
 const OrgData = [
   {
@@ -8,7 +8,16 @@ const OrgData = [
     kategori: "Panti Asuhan",
     status: "Membutuhkan",
     halal: "Halal",
-    img: { yayasanabdulbari },
+    img: yayasanabdulbari,
+  },
+  {
+    id: 2,
+    name: "Yayasan Abdul Bari",
+    alamat: "Jl. Sulaiman",
+    kategori: "Panti Asuhan",
+    status: "Membutuhkan",
+    halal: "Halal",
+    img: yayasanabdulbari,
   },
 ];
 
