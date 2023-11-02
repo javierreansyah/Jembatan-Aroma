@@ -6,6 +6,7 @@ import SignUp from "./SignUp";
 import Input from "./forms/Input";
 import Select from "./forms/Select";
 import OrgList from "./OrgList";
+import Clickable from "./forms/Clickable";
 
 export {
   Navbar,
@@ -16,4 +17,5 @@ export {
   Input,
   Select,
   OrgList,
+  Clickable,
 };
