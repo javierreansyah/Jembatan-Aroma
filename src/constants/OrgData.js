@@ -1,7 +1,7 @@
 import {
   yayasanabdulbari,
   yayasanlolipon,
-  yayasanmanarulhuda, 
+  yayasanmanarulhuda,
 } from "../assets/images/org-photos/orgPhotoIndex.js";
 
 const orgData = [
@@ -21,7 +21,7 @@ const orgData = [
     kategori: "Panti Asuhan",
     status: "Membutuhkan",
     halal: "Halal",
-    img: yayasanabdulbari,
+    img: yayasanlolipon,
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const orgData = [
     status: "Membutuhkan",
     halal: "Halal",
     img: yayasanmanarulhuda,
-  }
+  },
 ];
 
 export default orgData;
