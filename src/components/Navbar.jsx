@@ -20,14 +20,23 @@ const Navbar = () => {
 
           <div className="flex items-center">
             <ul className="hidden md:block">
-              <Link className="mr-6 text-sm text-wb-gray">Tentang Kami</Link>
-              <Link className="mr-6 text-sm text-wb-gray">Pusat Bantuan</Link>
-              <Link className="mr-6 text-sm text-wb-gray">Donatur Kami</Link>
+              <Link to="/tentang" className="mr-6 text-sm text-wb-gray">
+                Tentang Kami
+              </Link>
+              <Link to="/bantuan" className="mr-6 text-sm text-wb-gray">
+                Pusat Bantuan
+              </Link>
+              <Link to="/donatur" className="mr-6 text-sm text-wb-gray">
+                Donatur Kami
+              </Link>
               <Link to="/yayasan" className="mr-6 text-sm text-wb-gray">
                 Yayasan Sementara
               </Link>
             </ul>
-            <Link className="mr-3 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white md:mr-0">
+            <Link
+              to="/masuk"
+              className="mr-3 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white md:mr-0"
+            >
               Masuk
             </Link>
             <button
