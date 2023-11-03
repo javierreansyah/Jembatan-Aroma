@@ -19,7 +19,7 @@ const Navbar = () => {
           </Link>
 
           <div className="flex items-center">
-            <ul className="hidden md:block">
+            <ul className="hidden lg:block">
               <Link to="/tentang" className="mr-6 text-sm text-wb-gray">
                 Tentang Kami
               </Link>
@@ -30,17 +30,20 @@ const Navbar = () => {
                 Donatur Kami
               </Link>
               <Link to="/yayasan" className="mr-6 text-sm text-wb-gray">
-                Yayasan Sementara
+                Yayasan
+              </Link>
+              <Link to="/donasi" className="mr-6 text-sm text-wb-gray">
+                Donasi
               </Link>
             </ul>
             <Link
               to="/masuk"
-              className="mr-3 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white md:mr-0"
+              className="mr-3 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white lg:mr-0"
             >
               Masuk
             </Link>
             <button
-              className="flex items-center rounded-full border-2 border-wb-redorange px-4 py-1 text-sm font-semibold text-wb-redorange md:hidden"
+              className="flex items-center rounded-full border-2 border-wb-redorange px-4 py-1 text-sm font-semibold text-wb-redorange lg:hidden"
               onClick={toggleSidebar}
             >
               <p className="mr-2">Menu</p>

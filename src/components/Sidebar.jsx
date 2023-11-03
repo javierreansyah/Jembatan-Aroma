@@ -9,7 +9,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
       <Link
         to={to}
         onClick={toggleSidebar}
-        className="my-3 block text-wb-gray hover:text-wb-yellow"
+        className="my-3 block text-wb-gray hover:text-wb-yellow md:text-lg"
       >
         {text}
       </Link>

@@ -11,6 +11,7 @@ import About from "./About";
 import Donor from "./Donor";
 import Support from "./Support";
 import Login from "./Login";
+import Donation from "./Donation";
 
 export {
   Navbar,
@@ -26,4 +27,5 @@ export {
   Donor,
   Support,
   Login,
+  Donation,
 };

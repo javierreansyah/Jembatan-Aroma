@@ -10,6 +10,7 @@ import {
   About,
   Donor,
   Support,
+  Donation,
 } from "./components/index.js";
 
 const App = () => (
@@ -23,6 +24,7 @@ const App = () => (
       <Route path="/tentang" element={<About />} />
       <Route path="/donatur" element={<Donor />} />
       <Route path="/bantuan" element={<Support />} />
+      <Route path="/donasi" element={<Donation />} />
     </Routes>
     <ResponsiveHelper />
   </>

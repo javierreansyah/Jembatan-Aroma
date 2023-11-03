@@ -19,7 +19,7 @@ const orgData = [
     name: "Yayasan Abdul Bari",
     alamat: "Jl. Sulaiman",
     kategori: "Panti Asuhan",
-    status: "Membutuhkan",
+    status: "Tidak Membutuhkan",
     halal: "Halal",
     img: yayasanlolipon,
   },

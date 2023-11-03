@@ -9,6 +9,62 @@ const OrgList = () => {
   const toggleFilter = () => {
     setisFilterOpe(!isFilterOpen);
   };
+  const [filters, setFilters] = useState({
+    categories: [],
+    status: [],
+    halal: null,
+  });
+
+  const handleCategoryChange = (category) => {
+    if (filters.categories.includes(category)) {
+      setFilters({
+        ...filters,
+        categories: filters.categories.filter((c) => c !== category),
+      });
+    } else {
+      setFilters({
+        ...filters,
+        categories: [...filters.categories, category],
+      });
+    }
+  };
+
+  const handleStatusChange = (status) => {
+    if (filters.status.includes(status)) {
+      setFilters({
+        ...filters,
+        status: filters.status.filter((s) => s !== status),
+      });
+    } else {
+      setFilters({
+        ...filters,
+        status: [...filters.status, status],
+      });
+    }
+  };
+
+  const handleHalalChange = (value) => {
+    setFilters({
+      ...filters,
+      halal: value,
+    });
+  };
+
+  const filteredOrgs = orgData.filter((org) => {
+    const categoryFilter =
+      filters.categories.length === 0 ||
+      filters.categories.includes(org.kategori);
+    const statusFilter =
+      filters.status.length === 0 || filters.status.includes(org.status);
+    const halalFilter = filters.halal === null || org.halal === filters.halal;
+
+    return categoryFilter && statusFilter && halalFilter;
+  });
+
+  const printFilters = () => {
+    console.log(filters);
+  };
+
   return (
     <div className="container">
       <h1 className="my-4 text-4xl font-bold">Daftar Yayasan</h1>
@@ -28,25 +84,47 @@ const OrgList = () => {
           <div className={`${!isFilterOpen ? "hidden" : ""} xl:block`}>
             <h1 className="text-md mt-6 font-bold">Kategori</h1>
             <hr className="my-2 w-full border-t border-gray-300" />
-            <Clickable id="panti-asuhan" type="checkbox" label="Panti Asuhan" />
+            <Clickable
+              id="panti-asuhan"
+              type="checkbox"
+              label="Panti Asuhan"
+              onChange={handleCategoryChange}
+            />
             <hr className="my-2 w-full border-t border-gray-300" />
-            <Clickable id="panti-jompo" type="checkbox" label="Panti Jompo" />
+            <Clickable
+              id="panti-jompo"
+              type="checkbox"
+              label="Panti Jompo"
+              onChange={handleCategoryChange}
+            />
             <hr className="my-2 w-full border-t border-gray-300" />
             <Clickable
               id="lembaga-permasyarakatan"
               type="checkbox"
               label="Lembaga Permasyarakatan"
+              onChange={handleCategoryChange}
             />
             <hr className="my-2 w-full border-t border-gray-300" />
-            <Clickable id="lain-lain" type="checkbox" label="Lain-Lain" />
+            <Clickable
+              id="lain-lain"
+              type="checkbox"
+              label="Lain-Lain"
+              onChange={handleCategoryChange}
+            />
 
             <h1 className="text-md mt-4 font-bold">Status</h1>
-            <Clickable id="membutuhkan" type="checkbox" label="Membutuhkan" />
+            <Clickable
+              id="membutuhkan"
+              type="checkbox"
+              label="Membutuhkan"
+              onChange={handleStatusChange}
+            />
             <hr className="my-2 w-full border-t border-gray-300" />
             <Clickable
               id="tidak-membutuhkan"
               type="checkbox"
               label="Tidak Membutuhkan"
+              onChange={handleStatusChange}
             />
 
             <h1 className="text-md mt-4 font-bold">Menerima Makanan</h1>
@@ -55,6 +133,7 @@ const OrgList = () => {
               name="menerima-makanan"
               type="radio"
               label="Halal"
+              onChange={handleHalalChange}
             />
             <hr className="my-2 w-full border-t border-gray-300" />
             <Clickable
@@ -62,20 +141,24 @@ const OrgList = () => {
               name="menerima-makanan"
               type="radio"
               label="Non Halal"
+              onChange={handleHalalChange}
             />
             <button
               className="mt-4 rounded-2xl bg-wb-redorange px-4 py-1 text-wb-white xl:hidden"
-              onClick={toggleFilter}
+              onClick={(toggleFilter, printFilters)}
             >
               Terapkan
             </button>
-            <button className="mt-4 hidden rounded-2xl bg-wb-redorange px-4 py-1 text-wb-white xl:block">
+            <button
+              className="mt-4 hidden rounded-2xl bg-wb-redorange px-4 py-1 text-wb-white xl:block"
+              onClick={printFilters}
+            >
               Terapkan
             </button>
           </div>
         </div>
         <ul className="rounded-3xl bg-wb-lightgray2 px-8 py-1 xl:w-full">
-          {orgData.map((org) => (
+          {filteredOrgs.map((org) => (
             <li
               key={org.id}
               className="my-8 rounded-2xl bg-wb-white p-6 shadow-md sm:flex sm:gap-6"
