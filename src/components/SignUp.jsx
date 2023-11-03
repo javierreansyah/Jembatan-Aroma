@@ -1,12 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import {
-  Input,
-  Select,
-  OrgInformation,
-  AdminIdentity,
-  OrgCertificate,
-} from "./index";
+import { OrgInformation, AdminIdentity, OrgCertificate } from "./index";
 
 const SignUp = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -50,9 +44,9 @@ const SignUp = () => {
         </div>
 
         <div className="w-full">
-          <OrgInformation display={currentPage === 1 ? true : false} />
-          <AdminIdentity display={currentPage === 2 ? true : false} />
-          <OrgCertificate display={currentPage === 3 ? true : false} />
+          <OrgInformation display={currentPage === 1} />
+          <AdminIdentity display={currentPage === 2} />
+          <OrgCertificate display={currentPage === 3} />
 
           <div className="flex h-fit w-full justify-between rounded-2xl bg-wb-lightgray p-8">
             <button

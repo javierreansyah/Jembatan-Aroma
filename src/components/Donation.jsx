@@ -1,8 +1,6 @@
 import { useState } from "react";
 import React from "react";
 import {
-  Input,
-  Select,
   ChoosePhilantrophy,
   DeliveryForm,
   DeliveryStatus,
@@ -61,12 +59,12 @@ const Donation = () => {
         </div>
 
         <div className="w-full">
-          <FoodForm display={currentPage === 1 ? true : false} />
-          <SafetyForm display={currentPage === 2 ? true : false} />
-          <ChoosePhilantrophy display={currentPage === 3 ? true : false} />
-          <PhilantropyContact display={currentPage === 4 ? true : false} />
-          <DeliveryForm display={currentPage === 5 ? true : false} />
-          <DeliveryStatus display={currentPage === 6 ? true : false} />
+          <FoodForm display={currentPage === 1} />
+          <SafetyForm display={currentPage === 2} />
+          <ChoosePhilantrophy display={currentPage === 3} />
+          <PhilantropyContact display={currentPage === 4} />
+          <DeliveryForm display={currentPage === 5} />
+          <DeliveryStatus display={currentPage === 6} />
 
           <div className="flex h-fit w-full justify-between rounded-2xl bg-wb-lightgray p-8">
             <button
