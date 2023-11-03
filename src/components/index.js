@@ -12,6 +12,16 @@ import Donor from "./Donor";
 import Support from "./Support";
 import Login from "./Login";
 import Donation from "./Donation";
+import ChoosePhilantrophy from "./donation-page/ChoosePhilantrophy.jsx";
+import DeliveryForm from "./donation-page/DeliveryForm.jsx";
+import DeliveryStatus from "./donation-page/DeliveryStatus.jsx";
+import FoodForm from "./donation-page/FoodForm.jsx";
+import FoodList from "./donation-page/FoodList.jsx";
+import PhilantropyContact from "./donation-page/PhilantropyContact.jsx";
+import SafetyForm from "./donation-page/SafetyForm.jsx";
+import AdminIdentity from "./sign-up/AdminIdentity";
+import OrgCertificate from "./sign-up/OrgCertificate.jsx";
+import OrgInformation from "./sign-up/OrgInformation";
 
 export {
   Navbar,
@@ -28,4 +38,14 @@ export {
   Support,
   Login,
   Donation,
+  ChoosePhilantrophy,
+  DeliveryForm,
+  DeliveryStatus,
+  FoodForm,
+  FoodList,
+  PhilantropyContact,
+  SafetyForm,
+  AdminIdentity,
+  OrgCertificate,
+  OrgInformation,
 };

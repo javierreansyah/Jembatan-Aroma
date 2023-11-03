@@ -58,8 +58,7 @@ const OrgList = () => {
       filters.status.length === 0 || filters.status.includes(org.status);
     const halalFilter =
       filters.halal === null ||
-      (filters.halal === "Halal" && org.halal === "Halal") ||
-      org.halal === "Non Halal" ||
+      filters.halal === "Halal" ||
       (filters.halal === "Non Halal" && org.halal === "Non Halal");
 
     return categoryFilter && statusFilter && halalFilter;
