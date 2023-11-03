@@ -29,7 +29,7 @@ const orgData = [
     alamat: "Jl. Sumbersari III No.235",
     kategori: "Panti Asuhan",
     status: "Membutuhkan",
-    halal: "Halal",
+    halal: "Non Halal",
     img: yayasanmanarulhuda,
   },
 ];

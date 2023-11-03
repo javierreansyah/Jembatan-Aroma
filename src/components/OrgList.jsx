@@ -56,7 +56,11 @@ const OrgList = () => {
       filters.categories.includes(org.kategori);
     const statusFilter =
       filters.status.length === 0 || filters.status.includes(org.status);
-    const halalFilter = filters.halal === null || org.halal === filters.halal;
+    const halalFilter =
+      filters.halal === null ||
+      (filters.halal === "Halal" && org.halal === "Halal") ||
+      org.halal === "Non Halal" ||
+      (filters.halal === "Non Halal" && org.halal === "Non Halal");
 
     return categoryFilter && statusFilter && halalFilter;
   });
@@ -70,7 +74,7 @@ const OrgList = () => {
       <h1 className="my-4 text-4xl font-bold">Daftar Yayasan</h1>
 
       <div className="xl:flex xl:gap-10">
-        <div className="mb-6 w-full rounded-3xl bg-wb-lightgray2 p-6 xl:mb-0 xl:w-96">
+        <div className="mb-6 h-fit w-full rounded-3xl bg-wb-lightgray2 p-6 xl:mb-0 xl:w-96">
           <div className="flex items-center justify-between">
             <h1 className="text-2xl font-bold">Filter</h1>
             <button
@@ -157,7 +161,7 @@ const OrgList = () => {
             </button>
           </div>
         </div>
-        <ul className="rounded-3xl bg-wb-lightgray2 px-8 py-1 xl:w-full">
+        <ul className="h-fit rounded-3xl bg-wb-lightgray2 px-8 py-1 xl:w-full">
           {filteredOrgs.map((org) => (
             <li
               key={org.id}
