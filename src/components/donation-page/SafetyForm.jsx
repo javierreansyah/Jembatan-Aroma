@@ -1,7 +1,7 @@
 import React from "react";
 
-const SafetyForm = () => {
-  return <div>SafetyForm</div>;
+const SafetyForm = ({ display }) => {
+  return <div className={`${display ? "block" : "hidden"}`}>SafetyForm</div>;
 };
 
 export default SafetyForm;

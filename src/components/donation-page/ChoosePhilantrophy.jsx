@@ -1,7 +1,9 @@
 import React from "react";
 
-const ChoosePhilantrophy = () => {
-  return <div>ChoosePhilantrophy</div>;
+const ChoosePhilantrophy = ({ display }) => {
+  return (
+    <div className={`${display ? "block" : "hidden"}`}>ChoosePhilantrophy</div>
+  );
 };
 
 export default ChoosePhilantrophy;

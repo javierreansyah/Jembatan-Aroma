@@ -1,7 +1,9 @@
 import React from "react";
 
-const PhilantropyContact = () => {
-  return <div>PhilantropyContact</div>;
+const PhilantropyContact = ({ display }) => {
+  return (
+    <div className={`${display ? "block" : "hidden"}`}>PhilantropyContact</div>
+  );
 };
 
 export default PhilantropyContact;

@@ -1,12 +1,22 @@
 import { useState } from "react";
 import React from "react";
-import { Input, Select } from "./index";
+import {
+  Input,
+  Select,
+  ChoosePhilantrophy,
+  DeliveryForm,
+  DeliveryStatus,
+  FoodForm,
+  FoodList,
+  PhilantropyContact,
+  SafetyForm,
+} from "./index";
 
 const Donation = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const goToNextPage = () => {
-    setCurrentPage((prevPage) => Math.min(prevPage + 1, 5));
+    setCurrentPage((prevPage) => Math.min(prevPage + 1, 6));
   };
 
   const goToPreviousPage = () => {
@@ -18,7 +28,8 @@ const Donation = () => {
     { label: "Keamanan Makanan", selected: currentPage === 2 },
     { label: "Yayasan Tujuan", selected: currentPage === 3 },
     { label: "Kontak", selected: currentPage === 4 },
-    { label: "Status", selected: currentPage === 5 },
+    { label: "Metode Pengiriman", selected: currentPage === 5 },
+    { label: "Status", selected: currentPage === 6 },
   ];
 
   const orgSelectOption = [
@@ -50,25 +61,13 @@ const Donation = () => {
         </div>
 
         <div className="w-full">
-          <div className="mb-8 h-fit w-full rounded-2xl bg-wb-lightgray p-8">
-            <h1 className="text-3xl font-bold text-wb-gray">
-              Isikan Informasi Lembaga Anda
-            </h1>
-            <hr className="my-4 w-full border-t border-gray-200" />
-            <form>
-              <Input
-                id="org-name"
-                type="text"
-                placeholder="Nama Lembaga"
-                label="Nama Lembaga"
-              />
-              <Select
-                id="jenis-lembaga"
-                label="Daftar Sebagai"
-                options={orgSelectOption}
-              />
-            </form>
-          </div>
+          <FoodForm display={currentPage === 1 ? true : false} />
+          <SafetyForm display={currentPage === 2 ? true : false} />
+          <ChoosePhilantrophy display={currentPage === 3 ? true : false} />
+          <PhilantropyContact display={currentPage === 4 ? true : false} />
+          <DeliveryForm display={currentPage === 5 ? true : false} />
+          <DeliveryStatus display={currentPage === 6 ? true : false} />
+
           <div className="flex h-fit w-full justify-between rounded-2xl bg-wb-lightgray p-8">
             <button
               className="mr-3 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white lg:mr-0"

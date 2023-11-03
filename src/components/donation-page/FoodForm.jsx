@@ -1,7 +1,7 @@
 import React from "react";
 
-const FoodForm = () => {
-  return <div>FoodForm</div>;
+const FoodForm = ({ display }) => {
+  return <div className={`${display ? "block" : "hidden"}`}>FoodForm</div>;
 };
 
 export default FoodForm;

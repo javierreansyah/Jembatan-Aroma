@@ -33,7 +33,7 @@ const SignUp = () => {
             Alur
           </h1>
           <hr className="my-4 hidden w-full border-t border-gray-200 xl:block" />
-          <div>
+          <div className="w-full space-y-2 md:flex md:gap-3 md:space-y-0 xl:block xl:space-y-3">
             {flowBox.map((flow, index) => (
               <div
                 key={index}
@@ -41,7 +41,7 @@ const SignUp = () => {
                   flow.selected
                     ? "bg-wb-red text-wb-white"
                     : "bg-wb-lightgray2 text-wb-gray"
-                } flex-1 rounded-xl px-2 py-2 text-center text-xs font-semibold lg:text-sm xl:mb-4`}
+                }  flex-1 rounded-xl px-2 py-2 text-center text-xs font-semibold lg:text-sm xl:mb-4`}
               >
                 {flow.label}
               </div>
