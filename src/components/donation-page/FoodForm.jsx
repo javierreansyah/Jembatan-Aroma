@@ -134,7 +134,7 @@ const FoodForm = ({ display, foodList, setFoodList }) => {
                       onClick={() => handleDelete(index)}
                       className="rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white"
                     >
-                      Delete
+                      Hapus
                     </button>
                   </div>
                 </div>

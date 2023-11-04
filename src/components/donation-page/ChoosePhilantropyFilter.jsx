@@ -46,9 +46,9 @@ const ChoosePhilantropyFilter = ({ display, filters, setFilters }) => {
   return (
     <>
       <div className={`${display ? "block" : "hidden"}`}>
-        <div className="h-fit w-full rounded-3xl bg-wb-lightgray p-6 xl:mb-0 xl:w-96">
+        <div className="h-fit w-full rounded-3xl bg-wb-lightgray p-6 xl:mb-0">
           <div className="flex items-center justify-between">
-            <h1 className="text-2xl font-bold">Filter</h1>
+            <h1 className="text-3xl font-bold">Filter</h1>
             <button
               onClick={toggleFilter}
               className="rounded-2xl bg-wb-redorange px-4 py-1 text-wb-white xl:hidden"
@@ -57,7 +57,8 @@ const ChoosePhilantropyFilter = ({ display, filters, setFilters }) => {
             </button>
           </div>
           <div className={`${!isFilterOpen ? "hidden" : ""} xl:block`}>
-            <h1 className="text-md mt-6 font-bold">Kategori</h1>
+            <hr className="my-4 w-full border-t border-gray-200" />
+            <h1 className="text-md font-bold">Kategori</h1>
             <hr className="my-2 w-full border-t border-gray-300" />
             <Clickable
               id="panti-asuhan"

@@ -7,7 +7,6 @@ import {
   DeliveryForm,
   DeliveryStatus,
   FoodForm,
-  FoodList,
   PhilantropyContact,
   SafetyForm,
 } from "./index";
@@ -70,8 +69,8 @@ const Donation = () => {
   return (
     <div className="container">
       <div className="xl:flex xl:gap-10">
-        <div className="mb-8 space-y-8">
-          <div className="h-fit w-full justify-between gap-3 rounded-3xl bg-wb-lightgray p-4 md:p-2 xl:w-96 xl:p-8">
+        <div className="mb-8 w-full space-y-8 xl:w-96">
+          <div className="h-fit w-full justify-between gap-3 rounded-3xl bg-wb-lightgray p-4 md:p-2  xl:p-8">
             <h1 className="hidden text-3xl font-bold text-wb-gray xl:block">
               Alur
             </h1>
