@@ -1,5 +1,7 @@
 import { useState } from "react";
 import React from "react";
+import orgData from "../constants/orgData.js";
+import { Clickable, ChoosePhilantropyFilter } from "./index.js";
 import {
   ChoosePhilantrophy,
   DeliveryForm,
@@ -11,6 +13,7 @@ import {
 } from "./index";
 
 const Donation = () => {
+  //paging
   const [currentPage, setCurrentPage] = useState(1);
 
   const goToNextPage = () => {
@@ -21,6 +24,7 @@ const Donation = () => {
     setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
   };
 
+  //flow
   const flowBox = [
     { label: "Daftar Makanan", selected: currentPage === 1 },
     { label: "Keamanan Makanan", selected: currentPage === 2 },
@@ -30,51 +34,95 @@ const Donation = () => {
     { label: "Status", selected: currentPage === 6 },
   ];
 
-  const orgSelectOption = [
-    { value: "restoran", label: "Restoran" },
-    { value: "yayasan", label: "Yayasan" },
-  ];
+  //food list
+  const [foodList, setFoodList] = useState([
+    {
+      id: 1,
+      foodName: "Nasi Goreng Bari",
+      portion: 20,
+      storing: "Kulkas",
+      reheat: "Wajan",
+      lastingPeriod: 2,
+    },
+  ]);
+
+  //filtering
+  const [filters, setFilters] = useState({
+    categories: [],
+    status: [],
+    halal: null,
+  });
+
+  const filteredOrgs = orgData.filter((org) => {
+    const categoryFilter =
+      filters.categories.length === 0 ||
+      filters.categories.includes(org.kategori);
+    const statusFilter =
+      filters.status.length === 0 || filters.status.includes(org.status);
+    const halalFilter =
+      filters.halal === null ||
+      filters.halal === "Halal" ||
+      (filters.halal === "Non Halal" && org.halal === "Non Halal");
+
+    return categoryFilter && statusFilter && halalFilter;
+  });
+
   return (
     <div className="container">
       <div className="xl:flex xl:gap-10">
-        <div className="my-4 h-fit w-full justify-between gap-3 rounded-2xl bg-wb-lightgray p-4 md:p-2 xl:my-0 xl:w-96 xl:p-8">
-          <h1 className="hidden text-3xl font-bold text-wb-gray xl:block">
-            Alur
-          </h1>
-          <hr className="my-4 hidden w-full border-t border-gray-200 xl:block" />
-          <div className="space-y-2 md:flex md:gap-3 md:space-y-0 xl:block xl:space-y-3">
-            {flowBox.map((flow, index) => (
-              <div
-                key={index}
-                className={`${
-                  flow.selected
-                    ? "bg-wb-red text-wb-white"
-                    : "bg-wb-lightgray2 text-wb-gray"
-                } flex-1 rounded-xl px-2 py-2 text-center text-xs font-semibold lg:text-sm xl:mb-4`}
-              >
-                {flow.label}
-              </div>
-            ))}
+        <div className="mb-8 space-y-8">
+          <div className="h-fit w-full justify-between gap-3 rounded-3xl bg-wb-lightgray p-4 md:p-2 xl:w-96 xl:p-8">
+            <h1 className="hidden text-3xl font-bold text-wb-gray xl:block">
+              Alur
+            </h1>
+            <hr className="my-4 hidden w-full border-t border-gray-200 xl:block" />
+            <div className="space-y-2 md:flex md:gap-3 md:space-y-0 xl:block xl:space-y-3">
+              {flowBox.map((flow, index) => (
+                <div
+                  key={index}
+                  className={`${
+                    flow.selected
+                      ? "bg-wb-red text-wb-white"
+                      : "bg-wb-lightgray2 text-wb-gray"
+                  } flex-1 rounded-2xl px-2 py-2 text-center text-xs font-semibold lg:text-sm xl:mb-4`}
+                >
+                  {flow.label}
+                </div>
+              ))}
+            </div>
           </div>
+
+          <ChoosePhilantropyFilter
+            display={currentPage === 3}
+            filters={filters}
+            setFilters={setFilters}
+          />
         </div>
 
         <div className="w-full">
-          <FoodForm display={currentPage === 1} />
+          <FoodForm
+            display={currentPage === 1}
+            foodList={foodList}
+            setFoodList={setFoodList}
+          />
           <SafetyForm display={currentPage === 2} />
-          <ChoosePhilantrophy display={currentPage === 3} />
+          <ChoosePhilantrophy
+            display={currentPage === 3}
+            filteredOrgs={filteredOrgs}
+          />
           <PhilantropyContact display={currentPage === 4} />
           <DeliveryForm display={currentPage === 5} />
           <DeliveryStatus display={currentPage === 6} />
 
-          <div className="flex h-fit w-full justify-between rounded-2xl bg-wb-lightgray p-8">
+          <div className="mt-8 flex h-fit w-full justify-between rounded-3xl bg-wb-lightgray p-8">
             <button
-              className="mr-3 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white lg:mr-0"
+              className="rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white"
               onClick={goToPreviousPage}
             >
               Back
             </button>
             <button
-              className="mr-3 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white lg:mr-0"
+              className="rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white"
               onClick={goToNextPage}
             >
               Next

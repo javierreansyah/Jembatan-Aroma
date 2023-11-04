@@ -1,18 +1,12 @@
 import React from "react";
-import orgData from "../constants/orgData.js";
-import { Clickable } from "./index.js";
 import { useState } from "react";
+import { Clickable } from "../index.js";
 
-const OrgList = () => {
+const ChoosePhilantropyFilter = ({ display, filters, setFilters }) => {
   const [isFilterOpen, setisFilterOpe] = useState(false);
   const toggleFilter = () => {
     setisFilterOpe(!isFilterOpen);
   };
-  const [filters, setFilters] = useState({
-    categories: [],
-    status: [],
-    halal: null,
-  });
 
   const handleCategoryChange = (category) => {
     if (filters.categories.includes(category)) {
@@ -49,30 +43,10 @@ const OrgList = () => {
     });
   };
 
-  const filteredOrgs = orgData.filter((org) => {
-    const categoryFilter =
-      filters.categories.length === 0 ||
-      filters.categories.includes(org.kategori);
-    const statusFilter =
-      filters.status.length === 0 || filters.status.includes(org.status);
-    const halalFilter =
-      filters.halal === null ||
-      filters.halal === "Halal" ||
-      (filters.halal === "Non Halal" && org.halal === "Non Halal");
-
-    return categoryFilter && statusFilter && halalFilter;
-  });
-
-  const printFilters = () => {
-    console.log(filters);
-  };
-
   return (
-    <div className="container">
-      <h1 className="my-4 text-4xl font-bold">Daftar Yayasan</h1>
-
-      <div className="xl:flex xl:gap-10">
-        <div className="mb-6 h-fit w-full rounded-3xl bg-wb-lightgray p-6 xl:mb-0 xl:w-96">
+    <>
+      <div className={`${display ? "block" : "hidden"}`}>
+        <div className="h-fit w-full rounded-3xl bg-wb-lightgray p-6 xl:mb-0 xl:w-96">
           <div className="flex items-center justify-between">
             <h1 className="text-2xl font-bold">Filter</h1>
             <button
@@ -82,7 +56,6 @@ const OrgList = () => {
               {isFilterOpen ? "Tutup" : "Tampilkan"}
             </button>
           </div>
-
           <div className={`${!isFilterOpen ? "hidden" : ""} xl:block`}>
             <h1 className="text-md mt-6 font-bold">Kategori</h1>
             <hr className="my-2 w-full border-t border-gray-300" />
@@ -147,50 +120,18 @@ const OrgList = () => {
             />
             <button
               className="mt-4 rounded-2xl bg-wb-redorange px-4 py-1 text-wb-white xl:hidden"
-              onClick={(toggleFilter, printFilters)}
+              onClick={toggleFilter}
             >
               Terapkan
             </button>
-            <button
-              className="mt-4 hidden rounded-2xl bg-wb-redorange px-4 py-1 text-wb-white xl:block"
-              onClick={printFilters}
-            >
+            <button className="mt-4 hidden rounded-2xl bg-wb-redorange px-4 py-1 text-wb-white xl:block">
               Terapkan
             </button>
           </div>
         </div>
-        <div className="w-full">
-          {filteredOrgs.length === 0 ? (
-            <div className="h-fit rounded-3xl bg-wb-lightgray p-8 xl:w-full">
-              <h1 className="text-3xl font-bold">Tidak Ada Yayasan</h1>
-            </div>
-          ) : (
-            <ul className="h-fit space-y-8 rounded-3xl bg-wb-lightgray p-8 xl:w-full">
-              {filteredOrgs.map((org) => (
-                <li
-                  key={org.id}
-                  className="rounded-2xl bg-wb-white p-6 shadow-xl sm:flex sm:gap-6"
-                >
-                  <img
-                    src={org.img}
-                    alt=""
-                    className="mb-4 w-full rounded-xl sm:mb-0 sm:w-48"
-                  />
-                  <div>
-                    <h2 className="text-xl font-semibold">{org.name}</h2>
-                    <p>Alamat: {org.alamat}</p>
-                    <p>Kategori: {org.kategori}</p>
-                    <p>Status: {org.status}</p>
-                    <p>Halal: {org.halal}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
       </div>
-    </div>
+    </>
   );
 };
 
-export default OrgList;
+export default ChoosePhilantropyFilter;

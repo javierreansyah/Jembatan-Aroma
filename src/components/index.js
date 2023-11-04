@@ -22,6 +22,7 @@ import SafetyForm from "./donation-page/SafetyForm.jsx";
 import AdminIdentity from "./sign-up/AdminIdentity";
 import OrgCertificate from "./sign-up/OrgCertificate.jsx";
 import OrgInformation from "./sign-up/OrgInformation";
+import ChoosePhilantropyFilter from "./donation-page/ChoosePhilantropyFilter.jsx";
 
 export {
   Navbar,
@@ -48,4 +49,5 @@ export {
   AdminIdentity,
   OrgCertificate,
   OrgInformation,
+  ChoosePhilantropyFilter,
 };
