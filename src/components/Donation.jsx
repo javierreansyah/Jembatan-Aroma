@@ -67,7 +67,7 @@ const Donation = () => {
   });
 
   // choose org
-  const [chosenOrg, setChosenOrg] = useState(-1);
+  const [chosenOrg, setChosenOrg] = useState(0);
   const handleChooseOrg = (index) => {
     setChosenOrg(index);
   };
@@ -116,7 +116,10 @@ const Donation = () => {
             filteredOrgs={filteredOrgs}
             handleChooseOrg={handleChooseOrg}
           />
-          <PhilantropyContact display={currentPage === 4} />
+          <PhilantropyContact
+            display={currentPage === 4}
+            orgIndex={chosenOrg}
+          />
           <DeliveryForm display={currentPage === 5} />
           <DeliveryStatus display={currentPage === 6} />
 
