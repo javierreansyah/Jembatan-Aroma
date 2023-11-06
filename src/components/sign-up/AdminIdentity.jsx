@@ -9,11 +9,37 @@ const AdminIdentity = ({ display }) => {
         <hr className="my-4 w-full border-t border-gray-200" />
         <form>
           <Input
-            id="org-name"
+            id="adm-name"
             type="text"
-            placeholder="Nama Lembaga"
-            label="Nama Lembaga"
+            placeholder="Nama Pengelola"
+            label="Nama Pengelola"
           />
+          <Input
+            id="adm-NIK"
+            type="number"
+            placeholder="NIK Pengelola"
+            label="NIK Pengelola"
+          />
+          <Input
+            id="adm-phoneNumber"
+            type="number"
+            placeholder="Telepon Pengelola"
+            label="Telepon Pengelola"
+          />
+          <Input
+            id="adm-address"
+            type="text"
+            placeholder="Alamat Pengelola"
+            label="Alamat Pengelola"
+          />
+          <div className={`${display ? "block" : "hidden"}`}>
+            <Input
+              id="adm-scanKTP"
+              type="file"
+              placeholder="KTP Pengelola"
+              label="KTP Pengelola"
+            />
+          </div>
         </form>
       </div>
     </div>

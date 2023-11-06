@@ -22,7 +22,7 @@ const SafetyForm = ({ display }) => {
             id="bersih"
             type="checkbox"
             label={labelSafety.kemasan}
-          />{" "}
+          />
           <Clickable id="bersih" type="checkbox" label={labelSafety.keamanan} />
         </form>
       </div>

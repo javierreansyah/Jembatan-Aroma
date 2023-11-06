@@ -25,6 +25,36 @@ const OrgInformation = ({ display }) => {
             label="Daftar Sebagai"
             options={orgSelectOption}
           />
+          <Input
+            id="org-email"
+            type="email"
+            placeholder="Email Lembaga"
+            label="Email Lembaga"
+          />
+          <Input
+            id="org-username"
+            type="text"
+            placeholder="Username Lembaga"
+            label="Username Lembaga"
+          />
+          <Input
+            id="org-password"
+            type="password"
+            placeholder="Password Lembaga"
+            label="Password Lembaga"
+          />
+          <Input
+            id="org-phone-number"
+            type="number"
+            placeholder="Nomor Telepon Lembaga"
+            label="Nomor Telepon Lembaga"
+          />
+          <Input
+            id="org-address"
+            type="text"
+            placeholder="Alamat Lembaga"
+            label="Alamat Lembaga"
+          />
         </form>
       </div>
     </div>
