@@ -18,11 +18,15 @@ const SafetyForm = ({ display }) => {
         <form>
           <Clickable id="pisah" type="checkbox" label={labelSafety.pisah} />
           <Clickable id="bersih" type="checkbox" label={labelSafety.bersih} />
+<<<<<<< Updated upstream
           <Clickable
             id="bersih"
             type="checkbox"
             label={labelSafety.kemasan}
           />
+=======
+          <Clickable id="bersih" type="checkbox" label={labelSafety.kemasan} />
+>>>>>>> Stashed changes
           <Clickable id="bersih" type="checkbox" label={labelSafety.keamanan} />
         </form>
       </div>
