@@ -66,6 +66,12 @@ const Donation = () => {
     return categoryFilter && statusFilter && halalFilter;
   });
 
+  // choose org
+  const [chosenOrg, setChosenOrg] = useState(-1);
+  const handleChooseOrg = (index) => {
+    setChosenOrg(index);
+  };
+
   return (
     <div className="container">
       <div className="xl:flex xl:gap-10">
@@ -108,6 +114,7 @@ const Donation = () => {
           <ChoosePhilantrophy
             display={currentPage === 3}
             filteredOrgs={filteredOrgs}
+            handleChooseOrg={handleChooseOrg}
           />
           <PhilantropyContact display={currentPage === 4} />
           <DeliveryForm display={currentPage === 5} />
