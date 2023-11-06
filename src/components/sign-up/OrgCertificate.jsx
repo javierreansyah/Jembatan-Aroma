@@ -8,12 +8,16 @@ const OrgCertificate = ({ display }) => {
         <h1 className="text-3xl font-bold text-wb-gray">Sertifikat Lembaga</h1>
         <hr className="my-4 w-full border-t border-gray-200" />
         <form>
-          <Input
-            id="org-name"
-            type="text"
-            placeholder="Nama Lembaga"
-            label="Nama Lembaga"
-          />
+          <div className={`${display ? "block" : "hidden"}`}>
+            <Input id="cer-photo" type="file" label="Upload Foto Lembaga" />
+          </div>
+          <div>
+            <Input
+              id="cer-owner"
+              type="file"
+              label="Upload Sertifikat Lembaga"
+            />
+          </div>
         </form>
       </div>
     </div>

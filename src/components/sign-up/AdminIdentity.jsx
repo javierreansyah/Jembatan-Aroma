@@ -33,12 +33,7 @@ const AdminIdentity = ({ display }) => {
             label="Alamat Pengelola"
           />
           <div className={`${display ? "block" : "hidden"}`}>
-            <Input
-              id="adm-scanKTP"
-              type="file"
-              placeholder="KTP Pengelola"
-              label="KTP Pengelola"
-            />
+            <Input id="adm-scanKTP" type="file" label="Upload KTP Pengelola" />
           </div>
         </form>
       </div>
