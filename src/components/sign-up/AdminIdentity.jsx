@@ -1,7 +1,16 @@
-import React from "react";
-import { Input, Select } from "../index";
+import React, { useState } from "react";
+import { Input } from "../index";
 
 const AdminIdentity = ({ display }) => {
+  const [admScanKTP, setAdmScanKTP] = useState(null);
+
+  const handleScanKTPChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      setAdmScanKTP(file);
+    }
+  };
+
   return (
     <div className={`${display ? "block" : "hidden"}`}>
       <div className="mb-8 h-fit w-full rounded-2xl bg-wb-lightgray p-8">
@@ -32,8 +41,36 @@ const AdminIdentity = ({ display }) => {
             placeholder="Alamat Pengelola"
             label="Alamat Pengelola"
           />
-          <div className={`${display ? "block" : "hidden"}`}>
-            <Input id="adm-scanKTP" type="file" label="Upload KTP Pengelola" />
+          <div>
+            <h3 className="my-3 text-base font-bold text-wb-gray">
+              Upload Foto KTP
+            </h3>
+            <label
+              htmlFor="adm-scanKTP"
+              className="cursor-pointer rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red"
+            >
+              Upload Foto KTP
+            </label>
+            <input
+              id="adm-scanKTP"
+              type="file"
+              className="hidden"
+              onChange={handleScanKTPChange}
+            />
+            {admScanKTP && (
+              <div>
+                <p className="my-3 text-base font-medium text-wb-gray">
+                  Nama File: {admScanKTP.name}
+                </p>
+                {admScanKTP.type.startsWith("image/") && (
+                  <img
+                    src={URL.createObjectURL(admScanKTP)}
+                    alt="Preview KTP"
+                    className="my-2"
+                  />
+                )}
+              </div>
+            )}
           </div>
         </form>
       </div>

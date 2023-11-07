@@ -1,22 +1,82 @@
-import React from "react";
-import { Input, Select } from "../index";
+import React, { useState } from "react";
 
 const OrgCertificate = ({ display }) => {
+  const [cerPhoto, setCerPhoto] = useState(null);
+  const [cerOwner, setCerOwner] = useState(null);
+
+  const handlePhotoChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      setCerPhoto(file);
+    }
+  };
+
+  const handleOwnerChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      setCerOwner(file);
+    }
+  };
+
   return (
     <div className={`${display ? "block" : "hidden"}`}>
       <div className="mb-8 h-fit w-full rounded-2xl bg-wb-lightgray p-8">
         <h1 className="text-3xl font-bold text-wb-gray">Sertifikat Lembaga</h1>
         <hr className="my-4 w-full border-t border-gray-200" />
         <form>
-          <div className={`${display ? "block" : "hidden"}`}>
-            <Input id="cer-photo" type="file" label="Upload Foto Lembaga" />
+          <div>
+            <h3 className="my-3 text-base font-bold text-wb-gray">
+              Upload Foto Lembaga
+            </h3>
+            <label
+              htmlFor="cer-photo"
+              className="cursor-pointer rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red"
+            >
+              Upload Foto Lembaga
+            </label>
+            <input
+              id="cer-photo"
+              type="file"
+              className="hidden"
+              onChange={handlePhotoChange}
+            />
+            {cerPhoto && (
+              <div>
+                <p className="my-3 text-sm font-medium text-wb-gray">
+                  Nama File: {cerPhoto.name}
+                </p>
+                {cerPhoto.type.startsWith("image/") && (
+                  <img src={URL.createObjectURL(cerPhoto)} alt="Preview" />
+                )}
+              </div>
+            )}
           </div>
           <div>
-            <Input
+            <h3 className="my-3 text-base font-bold text-wb-gray">
+              Upload Sertifikat Lembaga
+            </h3>
+            <label
+              htmlFor="cer-owner"
+              className="hover-bg-wb-red cursor-pointer rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white"
+            >
+              Upload Sertifikat Lembaga
+            </label>
+            <input
               id="cer-owner"
               type="file"
-              label="Upload Sertifikat Lembaga"
+              className="hidden"
+              onChange={handleOwnerChange}
             />
+            {cerOwner && (
+              <div>
+                <p className="my-3 text-sm font-medium text-wb-gray">
+                  Nama File : {cerOwner.name}
+                </p>
+                {cerOwner.type.startsWith("image/") && (
+                  <img src={URL.createObjectURL(cerOwner)} alt="Preview" />
+                )}
+              </div>
+            )}
           </div>
         </form>
       </div>
