@@ -19,6 +19,7 @@ export default {
       },
       backgroundImage: {
         deskripsi: "url('./assets/images/deskripsi.jpg')",
+        home: "url('./assets/images/home2.jpg')",
       },
       spacing: {
         "wb-screen": "75rem",

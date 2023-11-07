@@ -4,11 +4,19 @@ import HomeImage from "../assets/images/home.jpg";
 
 const Home = () => {
   return (
+<<<<<<< Updated upstream
     <>
       <div className="container">
         <div className="items-center py-10 md:py-32 lg:flex lg:justify-between lg:gap-20">
           <div>
             <h1 className="md:max-w-xl/[72px] max-w-md text-4xl font-bold text-wb-yellow md:text-5xl lg:max-w-2xl xl:text-6xl/[72px]">
+=======
+    <div className="">
+      <div className="container py-20 px-12 pb-8 bg-home bg-center bg-cover">
+        <div className="flex items-center justify-between gap-20">
+          <div className="">
+            <h1 className="max-w-md text-4xl font-bold text-wb-yellow md:max-w-xl lg:text-6xl">
+>>>>>>> Stashed changes
               Berbagi Bersama Kepada Yang Membutuhkan
             </h1>
             <p className="mt-4 max-w-md text-base text-wb-gray">
