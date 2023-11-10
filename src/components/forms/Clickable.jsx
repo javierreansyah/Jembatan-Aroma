@@ -5,7 +5,10 @@ const Clickable = ({ id, type, name, label, onChange }) => {
     onChange(label);
   };
   return (
-    <label id={id} className="font-base my-2 flex w-fit text-sm text-wb-gray">
+    <label
+      id={id}
+      className="font-base my-2 flex w-fit items-center text-sm text-wb-gray"
+    >
       <input
         id={id}
         name={type === "radio" ? name : id}
@@ -13,9 +16,9 @@ const Clickable = ({ id, type, name, label, onChange }) => {
         onChange={handleOnChange}
         className={`${
           type === "radio" ? "rounded-full" : "rounded"
-        } focus:ring-none mr-2 block  border-2 border-gray-200 font-normal text-wb-gray hover:border-gray-400 focus:border-none focus:ring-0`}
+        } focus:ring-none mr-2 border-2 border-gray-200 text-wb-redorange hover:border-gray-400 focus:border-none focus:ring-0`}
       ></input>
-      {label}
+      <span className="text-base font-normal">{label}</span>
     </label>
   );
 };

@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Navbar,
   Home,
@@ -12,6 +12,7 @@ import {
   Donor,
   Support,
   Donation,
+  Account,
 } from "./components/index.js";
 
 const App = () => {
@@ -21,16 +22,20 @@ const App = () => {
   };
   return (
     <>
-      <Navbar />
+      <Navbar userType={userType} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/masuk" element={<Login setUserType={setUserType} />} />
+        <Route
+          path="/masuk"
+          element={<Login setUserType={handleUserTypeChange} />}
+        />
         <Route path="/bergabung" element={<SignUp />} />
         <Route path="/yayasan" element={<OrgList />} />
         <Route path="/tentang" element={<About />} />
         <Route path="/donatur" element={<Donor />} />
         <Route path="/bantuan" element={<Support />} />
         <Route path="/donasi" element={<Donation />} />
+        <Route path="/akun" element={<Account />} />
       </Routes>
       <ResponsiveHelper />
     </>

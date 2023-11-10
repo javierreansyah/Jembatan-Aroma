@@ -3,13 +3,40 @@ import { Link } from "react-router-dom";
 import Logo from "../assets/images/logo.png";
 import { Menu } from "../assets/svg/svgindex.js";
 import { Sidebar } from "./index.js";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const Navbar = () => {
+const Navbar = ({ userType }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+
+  //user type
+  const guestNabvar = [
+    { label: "Tentang Kami", to: "/tentang" },
+    { label: "Pusat Bantuan", to: "/bantuan" },
+    { label: "Donatur Kami", to: "/donatur" },
+  ];
+  const restaurantNabvar = [
+    { label: "Tentang Kami", to: "/tentang" },
+    { label: "Pusat Bantuan", to: "/bantuan" },
+    { label: "Donatur Kami", to: "/donatur" },
+    { label: "Donasi Makanan", to: "/donasi" },
+    { label: "Daftar Yayasan", to: "/yayasan" },
+  ];
+  const foundationNabvar = [
+    { label: "Tentang Kami", to: "/tentang" },
+    { label: "Pusat Bantuan", to: "/bantuan" },
+    { label: "Donatur Kami", to: "/donatur" },
+    { label: "Sejarah Donasi", to: "" },
+  ];
+
+  const currentNavbar = () => {
+    if (userType === "restoran") return restaurantNabvar;
+    if (userType === "yayasan") return foundationNabvar;
+    else return guestNabvar;
+  };
+
   return (
     <>
       <nav className="fixed top-0 w-full bg-white">
@@ -20,28 +47,36 @@ const Navbar = () => {
 
           <div className="flex items-center">
             <ul className="hidden lg:block">
-              <Link to="/tentang" className="mr-6 text-sm text-wb-gray">
-                Tentang Kami
-              </Link>
-              <Link to="/bantuan" className="mr-6 text-sm text-wb-gray">
-                Pusat Bantuan
-              </Link>
-              <Link to="/donatur" className="mr-6 text-sm text-wb-gray">
-                Donatur Kami
-              </Link>
-              <Link to="/yayasan" className="mr-6 text-sm text-wb-gray">
-                Yayasan
-              </Link>
-              <Link to="/donasi" className="mr-6 text-sm text-wb-gray">
-                Donasi
-              </Link>
+              {currentNavbar().map((link, index) => (
+                <Link key={index} to={link.to} className="mr-6 text-sm">
+                  {link.label}
+                </Link>
+              ))}
             </ul>
-            <Link
-              to="/masuk"
-              className="mr-3 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white lg:mr-0"
-            >
-              Masuk
-            </Link>
+            {userType === "guest" && (
+              <div className="flex">
+                <Link
+                  to="/masuk"
+                  className="mr-3 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white"
+                >
+                  Masuk
+                </Link>
+                <Link
+                  to="/bergabung"
+                  className="mr-3 hidden rounded-full border-2 border-wb-redorange bg-wb-white px-4 py-1 text-sm font-semibold text-wb-redorange lg:mr-0 lg:block"
+                >
+                  Bergabung
+                </Link>
+              </div>
+            )}
+            {(userType === "restoran" || userType === "yayasan") && (
+              <Link
+                to="/akun"
+                className="mr-3 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white"
+              >
+                Akun
+              </Link>
+            )}
             <button
               className="flex items-center rounded-full border-2 border-wb-redorange px-4 py-1 text-sm font-semibold text-wb-redorange lg:hidden"
               onClick={toggleSidebar}
@@ -52,7 +87,12 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      <Sidebar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+      <Sidebar
+        isSidebarOpen={isSidebarOpen}
+        toggleSidebar={toggleSidebar}
+        userType={userType}
+        links={currentNavbar}
+      />
       <div className="h-20"></div>
     </>
   );
