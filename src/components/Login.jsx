@@ -7,7 +7,7 @@ import home from "../assets/images/home.jpg";
 const Login = ({ setUserType }) => {
   const [usernameOrEmail, setUsernameOrEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [error, setError] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -21,14 +21,15 @@ const Login = ({ setUserType }) => {
 
     if (user) {
       setUserType(user.userType);
+      setError(false);
       navigate("/");
     } else {
-      setError("Invalid username/email or password. Please try again.");
+      setError(true);
     }
   };
 
   return (
-    <div className="container flex items-center pt-10 md:h-screen md:pt-0">
+    <div className="container flex min-h-screen items-start pt-10 lg:items-center lg:pt-0">
       <div className="flex w-full md:gap-20 md:pb-60">
         <div className="flex w-full items-center">
           <div className="w-full rounded-2xl md:pr-20">
@@ -52,6 +53,11 @@ const Login = ({ setUserType }) => {
                 value={password}
                 handle={setPassword}
               />
+              <div>
+                {error && (
+                  <p className="text-wb-red">Username atau password salah!</p>
+                )}
+              </div>
               <div className="flex items-center justify-between">
                 <Clickable
                   id="remember-me"
@@ -60,19 +66,25 @@ const Login = ({ setUserType }) => {
                 />
                 <Link className="">Lupa Password?</Link>
               </div>
-              <button
-                type="submit"
-                className="w-full rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-2 text-sm font-semibold text-wb-white md:w-fit"
-              >
-                Login
-              </button>
+              <div className="w-full space-y-4 md:flex md:items-center md:gap-4 md:space-y-0">
+                <button
+                  type="submit"
+                  className="w-full rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-2 text-sm font-semibold text-wb-white"
+                >
+                  Login
+                </button>
+
+                <Link
+                  to="/bergabung"
+                  className="flex w-full justify-center rounded-full border-2 border-wb-redorange bg-wb-white px-4 py-2 text-sm font-semibold text-wb-redorange"
+                >
+                  Bergabung
+                </Link>
+              </div>
             </form>
-            <Link to="/bergabung" className="">
-              Belum punya akun? Daftar sekarang!
-            </Link>
           </div>
         </div>
-        <div className="hidden w-full md:block">
+        <div className="hidden w-full lg:block">
           <img src={home} alt="home photo" />
         </div>
       </div>
