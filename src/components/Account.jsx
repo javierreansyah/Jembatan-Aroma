@@ -47,9 +47,15 @@ const Account = ({ userType }) => {
         </div>
       </div>
       <div className="w-full">
-        <Profile display={currentPage === "profil"} />
-        <DonationHistory display={currentPage === "riwayat-donasi"} />
-        <Certificate display={currentPage === "sertifikat"} />
+        <Profile display={currentPage === "profil"} userType={userType} />
+        <DonationHistory
+          display={currentPage === "riwayat-donasi"}
+          userType={userType}
+        />
+        <Certificate
+          display={currentPage === "sertifikat"}
+          userType={userType}
+        />
       </div>
     </div>
   );

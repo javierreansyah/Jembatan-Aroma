@@ -16,7 +16,7 @@ import {
 } from "./components/index.js";
 
 const App = () => {
-  const [userType, setUserType] = useState("guest");
+  const [userType, setUserType] = useState("yayasan");
   const handleUserTypeChange = (newUserType) => {
     setUserType(newUserType);
   };
