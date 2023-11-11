@@ -35,7 +35,7 @@ const App = () => {
         <Route path="/donatur" element={<Donor />} />
         <Route path="/bantuan" element={<Support />} />
         <Route path="/donasi" element={<Donation />} />
-        <Route path="/akun" element={<Account />} />
+        <Route path="/akun" element={<Account userType={userType} />} />
       </Routes>
       <ResponsiveHelper />
     </>

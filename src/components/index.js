@@ -23,6 +23,9 @@ import OrgCertificate from "./sign-up/OrgCertificate.jsx";
 import OrgInformation from "./sign-up/OrgInformation";
 import ChoosePhilantropyFilter from "./donation-page/ChoosePhilantropyFilter.jsx";
 import Account from "./Account.jsx";
+import Profile from "./account-components/Profile.jsx";
+import DonationHistory from "./account-components/DonationHistory.jsx";
+import Certificate from "./account-components/Certificate.jsx";
 
 export {
   Navbar,
@@ -50,4 +53,7 @@ export {
   OrgInformation,
   ChoosePhilantropyFilter,
   Account,
+  Profile,
+  DonationHistory,
+  Certificate,
 };

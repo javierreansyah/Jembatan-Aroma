@@ -47,7 +47,7 @@ const Login = ({ setUserType }) => {
               />
               <Input
                 id="password"
-                type="text"
+                type="password"
                 placeholder="Password"
                 label="Password"
                 value={password}
