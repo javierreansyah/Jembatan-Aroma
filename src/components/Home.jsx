@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import HomeImage from "../assets/images/home.jpg";
 import Description from "../assets/images/deskripsi.png";
-import { Triangle } from "../assets/svg/svgindex.js";
+import { Triangle, Elips } from "../assets/svg/svgindex.js";
 import donationPhoto from "../assets/images/home-process/donation.png";
 import loginPhoto from "../assets/images/home-process/login.png";
 import regPhoto from "../assets/images/home-process/reg.png";
 import verificationPhoto from "../assets/images/home-process/verification.png";
 
-const Home = () => {
+const Home = ({ userType }) => {
   const testimonies = [
     {
       text: "Dengan Jembatan Aroma, restoran kami dapat menyumbangkan makanan berlebih dengan mudah dan aman. Kami merasa senang bisa berkontribusi dalam mengurangi pemborosan makanan dan membantu komunitas yang membutuhkan. Platform ini sangat membantu dan kami bangga menjadi bagian dari usaha ini.",
@@ -28,7 +28,7 @@ const Home = () => {
   ];
   return (
     <>
-      <div className="container mb-8 min-h-screen py-24 md:py-0 lg:mb-0">
+      <div className="container mb-8 py-24 md:py-0 lg:mb-0">
         <div className="md:py-32 lg:flex lg:h-screen lg:items-center lg:justify-between lg:gap-20">
           <div className="flex w-full items-center lg:pb-32">
             <div className="w-full">
@@ -39,21 +39,46 @@ const Home = () => {
                 Tugas kami adalah menjembatani usaha donasi makanan anda kepada
                 yang membutuhkan.
               </p>
-              <div className="mt-8 sm:flex sm:gap-4">
-                <Link
-                  to="/masuk"
-                  className="my-4 block w-full rounded-full border-2 border-wb-redorange bg-wb-redorange 
-                px-4 py-3 text-center text-sm font-semibold text-wb-white hover:bg-wb-red sm:my-0 sm:w-32"
-                >
-                  Masuk
-                </Link>
-                <Link
-                  className="block w-full rounded-full border-2 border-wb-redorange bg-wb-white px-4 py-3 text-center text-sm font-semibold text-wb-redorange hover:border-wb-red hover:text-wb-red sm:w-32"
-                  to="/bergabung"
-                >
-                  Bergabung
-                </Link>
-              </div>
+              {userType === "guest" && (
+                <div className="mt-8 sm:flex sm:gap-4">
+                  <Link
+                    to="/masuk"
+                    className="my-4 block w-full rounded-full border-2 border-wb-redorange bg-wb-redorange 
+                      px-4 py-3 text-center text-sm font-semibold text-wb-white hover:border-wb-orange hover:bg-wb-orange sm:my-0 sm:w-32"
+                  >
+                    Masuk
+                  </Link>
+                  <Link
+                    className="block w-full rounded-full border-2 border-wb-redorange 
+                    bg-wb-white px-4 py-3 text-center text-sm font-semibold text-wb-redorange hover:border-wb-orange hover:bg-wb-orange hover:text-wb-white sm:w-32"
+                    to="/bergabung"
+                  >
+                    Bergabung
+                  </Link>
+                </div>
+              )}
+              {userType === "restoran" && (
+                <div className="mt-8 sm:flex sm:gap-4">
+                  <Link
+                    className="my-4 block w-full rounded-full border-2 border-wb-redorange bg-wb-redorange 
+                      px-4 py-3 text-center text-sm font-semibold text-wb-white hover:border-wb-orange hover:bg-wb-orange sm:my-0 sm:w-fit"
+                    to="/donasi"
+                  >
+                    Donasi Sekarang
+                  </Link>
+                </div>
+              )}
+              {userType === "yayasan" && (
+                <div className="mt-8 sm:flex sm:gap-4">
+                  <Link
+                    className="my-4 block w-full rounded-full border-2 border-wb-redorange bg-wb-redorange 
+                      px-4 py-3 text-center text-sm font-semibold text-wb-white hover:border-wb-orange hover:bg-wb-orange sm:my-0 sm:w-fit"
+                    to="/akun"
+                  >
+                    Sejarah Donasi
+                  </Link>
+                </div>
+              )}
             </div>
             <div className="hidden lg:block lg:w-full">
               <img src={HomeImage} alt="HomeImage" className="max-h-wb-30" />
@@ -62,12 +87,12 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="relative flex h-80 w-full items-center justify-center overflow-x-clip bg-gradient-to-r from-wb-orangeyellow to-wb-redorange">
+      <div className="relative flex h-80 w-full items-center justify-center overflow-clip bg-gradient-to-r from-wb-orangeyellow to-wb-redorange">
         <div>
-          <Triangle className="rotate-75 scale:50 absolute -left-16  -top-16 md:scale-125" />
-          <Triangle className="rotate-15 absolute left-32 top-20 hidden scale-75 sm:block" />
-          <Triangle className="absolute -bottom-10 -right-16 -rotate-90 sm:scale-125" />
-          <Triangle className="absolute bottom-36 right-20 hidden rotate-90 scale-90 sm:block" />
+          <Elips className="absolute -left-16 -top-16  rotate-75 scale-125" />
+          <Elips className="absolute -bottom-40 left-52 hidden rotate-15 scale-75 md:block" />
+          <Elips className="absolute -bottom-16 -right-28 -rotate-90 scale-125" />
+          <Elips className="absolute -top-40 right-52 hidden rotate-90 scale-90 lg:block" />
         </div>
         <div className="container relative w-full p-12">
           <h1 className="text-center text-4xl font-bold text-wb-white">
@@ -108,8 +133,8 @@ const Home = () => {
 
       <div className="relative w-full overflow-x-clip bg-gradient-to-r from-wb-orange to-wb-red">
         <div>
-          <Triangle className="rotate-75 absolute -left-16 -top-16 scale-125" />
-          <Triangle className="rotate-15 absolute left-32 top-20 hidden scale-75 sm:block" />
+          <Triangle className="absolute -left-16 -top-16 rotate-75 scale-125" />
+          <Triangle className="absolute left-32 top-20 hidden rotate-15 scale-75 sm:block" />
           <Triangle className="absolute -bottom-10 -right-16 -rotate-90 scale-125" />
           <Triangle className="absolute bottom-36 right-20 hidden rotate-90 scale-90 sm:block" />
         </div>

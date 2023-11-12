@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import {
   Navbar,
@@ -21,11 +21,22 @@ const App = () => {
   const handleUserTypeChange = (newUserType) => {
     setUserType(newUserType);
   };
+
+  const ScrollToTop = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [location.pathname]);
+
+    return null; // This component doesn't render anything
+  };
   return (
     <>
+      <ScrollToTop />
       <Navbar userType={userType} />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home userType={userType} />} />
         <Route
           path="/masuk"
           element={<Login setUserType={handleUserTypeChange} />}

@@ -28,7 +28,7 @@ const Navbar = ({ userType }) => {
     { label: "Tentang Kami", to: "/tentang" },
     { label: "Pusat Bantuan", to: "/pusat-bantuan" },
     { label: "Donatur Kami", to: "/donatur" },
-    { label: "Sejarah Donasi", to: "" },
+    { label: "Sejarah Donasi", to: "/akun" },
   ];
 
   const currentNavbar = () => {
@@ -82,7 +82,7 @@ const Navbar = ({ userType }) => {
               </Link>
             )}
             <button
-              className="flex items-center rounded-full border-2 border-wb-redorange px-4 py-1 text-sm font-semibold text-wb-redorange hover:bg-wb-red lg:hidden"
+              className="flex items-center rounded-full border-2 border-wb-redorange px-4 py-1 text-sm font-semibold text-wb-redorange hover:border-wb-red hover:text-wb-red lg:hidden"
               onClick={toggleSidebar}
             >
               <p className="mr-2">Menu</p>
