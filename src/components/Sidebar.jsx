@@ -17,7 +17,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar, userType, links }) => {
   };
   return (
     <div
-      className={`fixed h-screen w-screen backdrop-blur-lg ${
+      className={`fixed z-50 h-screen w-screen backdrop-blur-lg ${
         !isSidebarOpen ? "hidden" : ""
       }`}
     >

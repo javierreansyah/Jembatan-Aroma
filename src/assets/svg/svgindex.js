@@ -1,4 +1,5 @@
-import Menu from "./Menu";
-import Close from "./close";
+import Menu from "./Menu.jsx";
+import Close from "./Close.jsx";
+import Triangle from "./Triangle.jsx";
 
-export { Menu, Close };
+export { Menu, Close, Triangle };

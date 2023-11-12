@@ -1,4 +1,5 @@
 import Navbar from "./Navbar";
+import Footer from "./Footer.jsx";
 import Sidebar from "./Sidebar";
 import Home from "./Home";
 import ResponsiveHelper from "./ResponsiveHelper";
@@ -30,6 +31,7 @@ import SupportCenter from "./support/SupportCenter.jsx";
 
 export {
   Navbar,
+  Footer,
   Sidebar,
   Home,
   ResponsiveHelper,

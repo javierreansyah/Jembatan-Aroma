@@ -39,7 +39,7 @@ const Navbar = ({ userType }) => {
 
   return (
     <>
-      <nav className="fixed top-0 w-full bg-white">
+      <nav className="fixed top-0 z-50 w-full bg-white">
         <div className="container flex h-20 items-center justify-between">
           <Link to="/">
             <img src={Logo} alt="Logo" className="h-8" />

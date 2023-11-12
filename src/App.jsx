@@ -13,6 +13,7 @@ import {
   Donation,
   Account,
   SupportCenter,
+  Footer,
 } from "./components/index.js";
 
 const App = () => {
@@ -37,6 +38,7 @@ const App = () => {
         <Route path="/donasi" element={<Donation />} />
         <Route path="/akun" element={<Account userType={userType} />} />
       </Routes>
+      <Footer />
       <ResponsiveHelper />
     </>
   );

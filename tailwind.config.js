@@ -12,13 +12,14 @@ export default {
         "wb-lightgray2": "#E6E6E6",
         "wb-white": "#FDFDFD",
         "wb-red": "#FF0000",
+        "wb-darkred": "#B80000",
         "wb-redorange": "#FF4D00",
         "wb-orange": "#FF7400",
         "wb-orangeyellow": "#FF9A00",
         "wb-yellow": "#FFC100",
+        "wb-green": "#009846",
       },
       backgroundImage: {
-        deskripsi: "url('./assets/images/deskripsi.jpg')",
         home: "url('./assets/images/home2.jpg')",
       },
       spacing: {
@@ -35,6 +36,10 @@ export default {
           xl: "5rem",
           "2xl": "6rem",
         },
+      },
+      rotate: {
+        15: "15deg",
+        75: "75deg",
       },
     },
   },

@@ -58,14 +58,14 @@ const DonationHistory = ({ display, userType }) => {
             >
               <div
                 className={`${
-                  historyOption === "berjalan" ? "bg-wb-orange" : "bg-wb-red"
+                  historyOption === "berjalan" ? "bg-wb-orange" : "bg-wb-green"
                 } rounded-t-xl px-8 pb-4 pt-6 lg:rounded-l-xl lg:rounded-tr-none`}
               >
                 <h2 className="text-2xl font-semibold text-wb-white">
                   #{current.id}
                 </h2>
                 <h2 className="text-normal font-semibold text-wb-white">
-                  {current.status}
+                  {current.status === "berjalan" ? "Berjalan" : "Diterima"}
                 </h2>
               </div>
 
