@@ -1,8 +1,9 @@
 import React from "react";
 import { Profile, DonationHistory, Certificate } from "./index.js";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const Account = ({ userType }) => {
+const Account = ({ userType, setUserType }) => {
   const [currentPage, setCurrentPage] = useState("profil");
   const sidebarOption = [
     {
@@ -21,6 +22,11 @@ const Account = ({ userType }) => {
       handleClick: () => setCurrentPage("sertifikat"),
     },
   ];
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    setUserType("guest");
+    navigate("/");
+  };
   return (
     <div className="container min-h-screen xl:flex xl:gap-10">
       <div className="mb-8 w-full space-y-8 xl:w-96">
@@ -43,6 +49,13 @@ const Account = ({ userType }) => {
                 {option.label}
               </button>
             ))}
+            <button
+              onClick={handleLogout}
+              className="hover:bg-wb-lightergray xl:py- flex  w-full flex-1 justify-center rounded-full bg-wb-lightgray2 
+              px-2 py-3 text-center text-xs font-semibold text-wb-gray hover:text-wb-white md:py-4 lg:text-sm xl:mb-4 xl:py-2"
+            >
+              Keluar
+            </button>
           </div>
         </div>
       </div>

@@ -47,7 +47,12 @@ const App = () => {
         <Route path="/donatur" element={<Donor />} />
         <Route path="/pusat-bantuan" element={<SupportCenter />} />
         <Route path="/donasi" element={<Donation />} />
-        <Route path="/akun" element={<Account userType={userType} />} />
+        <Route
+          path="/akun"
+          element={
+            <Account userType={userType} setUserType={handleUserTypeChange} />
+          }
+        />
       </Routes>
       <Footer />
       <ResponsiveHelper />
