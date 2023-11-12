@@ -165,9 +165,9 @@ const Home = ({ userType }) => {
       <div className="w-full bg-wb-lightgray">
         <div className="container space-y-10 py-32">
           <h1 className="text-center text-5xl font-bold ">Langkah Donasi</h1>
-          <div className="flex flex-wrap justify-center gap-20 2xl:gap-32">
-            <div className="flex flex-wrap justify-center gap-20 2xl:gap-32">
-              <div className="space-y-2 rounded-2xl bg-wb-white p-8 shadow-xl">
+          <div className="flex flex-wrap justify-center gap-6">
+            <div className="flex flex-wrap justify-center gap-6 ">
+              <div className="space-y-2 rounded-2xl bg-wb-white px-14 py-8 shadow-xl">
                 <div className="flex h-fit items-center sm:h-[200px]">
                   <img
                     src={regPhoto}
@@ -178,7 +178,7 @@ const Home = ({ userType }) => {
                 <h2 className="text-center text-2xl font-bold">Registrasi</h2>
               </div>
 
-              <div className="space-y-2 rounded-2xl bg-wb-white p-8 shadow-xl">
+              <div className="space-y-2 rounded-2xl bg-wb-white px-14 py-8 shadow-xl">
                 <div className="flex h-fit items-center sm:h-[200px]">
                   <img
                     src={loginPhoto}
@@ -190,19 +190,19 @@ const Home = ({ userType }) => {
               </div>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-20 2xl:gap-32">
-              <div className="space-y-2 rounded-2xl bg-wb-white p-8 shadow-xl">
+            <div className="flex flex-wrap justify-center gap-6">
+              <div className="space-y-2 rounded-2xl bg-wb-white px-14 py-8 shadow-xl">
                 <div className="flex h-fit items-center sm:h-[200px]">
                   <img
                     src={verificationPhoto}
                     alt=""
-                    className="relative inset-x-6 min-w-[100px] max-w-[150px]"
+                    className="relative inset-x-4 min-w-[100px] max-w-[150px]"
                   />
                 </div>
                 <h2 className="text-center text-2xl font-bold">Verifikasi</h2>
               </div>
 
-              <div className="space-y-2 rounded-2xl bg-wb-white p-8 shadow-xl">
+              <div className="space-y-2 rounded-2xl bg-wb-white px-14 py-8 shadow-xl">
                 <div className="flex h-fit items-center sm:h-[200px]">
                   <img
                     src={donationPhoto}

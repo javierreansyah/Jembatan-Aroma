@@ -1,7 +1,7 @@
 import React from "react";
 import { Clickable } from "../index.js";
 
-const DeliveryForm = ({ display }) => {
+const DeliveryForm = ({ display, handleNextPage }) => {
   return (
     <div className={`${display ? "block" : "hidden"}`}>
       <div className="mb-8 h-fit w-full rounded-3xl bg-wb-lightgray p-8">
@@ -24,6 +24,12 @@ const DeliveryForm = ({ display }) => {
             name="deliveryMethod"
           />
         </form>
+        <button
+          onClick={handleNextPage}
+          className="mt-4 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red"
+        >
+          Kirim
+        </button>
       </div>
     </div>
   );

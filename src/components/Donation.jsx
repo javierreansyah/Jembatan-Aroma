@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import React from "react";
 import orgData from "../constants/orgData.js";
 import { Clickable, ChoosePhilantropyFilter } from "./index.js";
@@ -14,6 +14,26 @@ import {
 const Donation = () => {
   //paging
   const [currentPage, setCurrentPage] = useState(1);
+  const [maxPage, setMaxPage] = useState(1);
+
+  const continuePage = () => {
+    if (currentPage === 6) return;
+    if (currentPage < maxPage) {
+      goToNextPage();
+      return;
+    }
+    goToNextPage();
+    setMaxPage((prev) => prev + 1);
+  };
+
+  const canNext = () => {
+    if (currentPage === 6) return false;
+    return currentPage === maxPage ? false : true;
+  };
+
+  const canBack = () => {
+    return currentPage === 1 ? false : true;
+  };
 
   const goToNextPage = () => {
     setCurrentPage((prevPage) => Math.min(prevPage + 1, 6));
@@ -44,6 +64,12 @@ const Donation = () => {
       lastingPeriod: 2,
     },
   ]);
+
+  useEffect(() => {
+    if (foodList.length === 0) {
+      setMaxPage(1);
+    }
+  }, [foodList]);
 
   //filtering
   const [filters, setFilters] = useState({
@@ -109,29 +135,46 @@ const Donation = () => {
             display={currentPage === 1}
             foodList={foodList}
             setFoodList={setFoodList}
+            handleNextPage={continuePage}
           />
-          <SafetyForm display={currentPage === 2} />
+          <SafetyForm
+            display={currentPage === 2}
+            handleNextPage={continuePage}
+          />
           <ChoosePhilantrophy
             display={currentPage === 3}
             filteredOrgs={filteredOrgs}
-            handleChooseOrg={handleChooseOrg}
+            handleChoose={handleChooseOrg}
+            handleNextPage={continuePage}
           />
           <PhilantropyContact
             display={currentPage === 4}
             orgIndex={chosenOrg}
+            handleNextPage={continuePage}
           />
-          <DeliveryForm display={currentPage === 5} />
-          <DeliveryStatus display={currentPage === 6} />
+          <DeliveryForm
+            display={currentPage === 5}
+            handleNextPage={continuePage}
+          />
+          <DeliveryStatus
+            display={currentPage === 6}
+            foodList={foodList}
+            orgIndex={chosenOrg}
+          />
 
-          <div className="mt-8 flex h-fit w-full justify-between rounded-3xl bg-wb-lightgray p-8">
+          <div className="mb-8 mt-8 flex h-fit w-full justify-between rounded-3xl bg-wb-lightgray p-8">
             <button
-              className="rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red"
+              disabled={!canBack()}
+              className={`rounded-full border-2 border-wb-redorange bg-wb-redorange 
+              px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red disabled:border-wb-lightgray2 disabled:bg-wb-lightgray2 disabled:text-wb-black`}
               onClick={goToPreviousPage}
             >
               Back
             </button>
             <button
-              className="rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red"
+              disabled={!canNext()}
+              className={`rounded-full border-2 border-wb-redorange bg-wb-redorange 
+              px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red disabled:border-wb-lightgray2 disabled:bg-wb-lightgray2 disabled:text-wb-black`}
               onClick={goToNextPage}
             >
               Next

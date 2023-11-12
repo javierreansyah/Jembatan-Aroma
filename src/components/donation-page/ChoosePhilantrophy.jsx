@@ -1,6 +1,15 @@
 import React from "react";
 
-const ChoosePhilantrophy = ({ display, filteredOrgs, handleChooseOrg }) => {
+const ChoosePhilantrophy = ({
+  display,
+  filteredOrgs,
+  handleChoose,
+  handleNextPage,
+}) => {
+  const handleChooseOrg = (index) => {
+    handleChoose(index);
+    handleNextPage();
+  };
   return (
     <div className={`${display ? "block" : "hidden"} w-full`}>
       {filteredOrgs.length === 0 ? (

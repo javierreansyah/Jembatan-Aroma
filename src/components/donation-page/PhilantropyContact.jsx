@@ -1,7 +1,7 @@
 import React from "react";
 import orgData from "../../constants/orgData";
 
-const PhilantropyContact = ({ display, orgIndex }) => {
+const PhilantropyContact = ({ display, orgIndex, handleNextPage }) => {
   const selectedOrg = orgData[orgIndex];
   return (
     <div className={`${display ? "block" : "hidden"}`}>
@@ -17,6 +17,12 @@ const PhilantropyContact = ({ display, orgIndex }) => {
         <p className="mt-3 w-full rounded-2xl bg-wb-lightgray2 p-4">
           {selectedOrg.email}
         </p>
+        <button
+          onClick={handleNextPage}
+          className="mt-4 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red"
+        >
+          Kontak Selesai
+        </button>
       </div>
     </div>
   );

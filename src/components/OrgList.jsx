@@ -159,7 +159,7 @@ const OrgList = () => {
             </button>
           </div>
         </div>
-        <div className="w-full">
+        <div className="mb-8 w-full">
           {filteredOrgs.length === 0 ? (
             <div className="h-fit rounded-3xl bg-wb-lightgray p-8 xl:w-full">
               <h1 className="text-3xl font-bold">Tidak Ada Yayasan</h1>

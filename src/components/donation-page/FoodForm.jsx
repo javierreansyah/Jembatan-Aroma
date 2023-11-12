@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Input, Select } from "../index";
 
-const FoodForm = ({ display, foodList, setFoodList }) => {
+const FoodForm = ({ display, foodList, setFoodList, handleNextPage }) => {
   const [foodName, setFoodName] = useState("");
   const [portion, setPortion] = useState("");
   const [storing, setStoring] = useState("");
@@ -140,6 +140,12 @@ const FoodForm = ({ display, foodList, setFoodList }) => {
                 </div>
               ))}
             </div>
+            <button
+              onClick={handleNextPage}
+              className="mt-4 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red"
+            >
+              Lanjutkan
+            </button>
           </>
         )}
       </div>

@@ -37,7 +37,7 @@ const Account = ({ userType }) => {
                 className={`${
                   option.selected
                     ? "bg-wb-red text-wb-white"
-                    : "bg-wb-lightgray2 text-wb-gray hover:bg-wb-orange hover:text-wb-white"
+                    : " hover:bg-wb-lightergray bg-wb-lightgray2 text-wb-gray  hover:text-wb-white"
                 }  flex w-full flex-1 justify-center rounded-full px-2 py-3 text-center text-xs font-semibold md:py-4 lg:text-sm xl:mb-4 xl:py-2`}
               >
                 {option.label}
