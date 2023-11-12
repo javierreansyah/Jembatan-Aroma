@@ -17,11 +17,10 @@ const Donor = () => {
         <h1 className="mb-10 text-center text-3xl font-bold text-wb-gray">
           Donatur Kami
         </h1>
-        <div className=" columns-1 gap-10 space-y-10 sm:columns-2 lg:columns-3 xl:columns-4">
+        <div className="columns-1 gap-10 space-y-10 sm:columns-2 lg:columns-3 xl:columns-4">
           <img src={Solaria} />
           <img src={Grab} />
           <img src={JCO} />
-          <img src={KFC} />
           <img src={filkom} />
           <img className="scale-50" src={UB} />
           <img src={tehBotol} />
