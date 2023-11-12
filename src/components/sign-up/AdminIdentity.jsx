@@ -41,36 +41,32 @@ const AdminIdentity = ({ display }) => {
             placeholder="Alamat Pengelola"
             label="Alamat Pengelola"
           />
-          <div>
-            <h3 className="my-3 text-base font-bold text-wb-gray">
+          <div className="my-3">
+            <h3 className="text-base font-bold text-wb-gray">
               Upload Foto KTP
             </h3>
-            <label
-              htmlFor="adm-scanKTP"
-              className="cursor-pointer rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red"
-            >
-              Upload Foto KTP
-            </label>
-            <input
-              id="adm-scanKTP"
-              type="file"
-              className="hidden"
-              onChange={handleScanKTPChange}
-            />
-            {admScanKTP && (
-              <div>
-                <p className="my-3 text-base font-medium text-wb-gray">
-                  Nama File: {admScanKTP.name}
-                </p>
-                {admScanKTP.type.startsWith("image/") && (
-                  <img
-                    src={URL.createObjectURL(admScanKTP)}
-                    alt="Preview KTP"
-                    className="my-2"
-                  />
-                )}
-              </div>
-            )}
+            <div className="my-3 flex items-center">
+              <label
+                htmlFor="adm-scanKTP"
+                className="cursor-pointer rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red"
+              >
+                Upload Foto KTP
+              </label>
+              <input
+                id="adm-scanKTP"
+                type="file"
+                className="hidden"
+                onChange={handleScanKTPChange}
+              />
+              {admScanKTP && (
+                <div className="ml-3">
+                  <p className="text-base font-medium text-wb-gray">
+                    Nama File:
+                    <span className="my-3 font-bold"> {admScanKTP.name}</span>
+                  </p>
+                </div>
+              )}
+            </div>
           </div>
         </form>
       </div>

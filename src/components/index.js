@@ -26,6 +26,7 @@ import Account from "./Account.jsx";
 import Profile from "./account-components/Profile.jsx";
 import DonationHistory from "./account-components/DonationHistory.jsx";
 import Certificate from "./account-components/Certificate.jsx";
+import SupportCenter from "./support/SupportCenter.jsx";
 
 export {
   Navbar,
@@ -56,4 +57,5 @@ export {
   Profile,
   DonationHistory,
   Certificate,
+  SupportCenter,
 };

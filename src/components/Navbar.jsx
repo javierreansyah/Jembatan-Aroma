@@ -14,19 +14,19 @@ const Navbar = ({ userType }) => {
   //user type
   const guestNabvar = [
     { label: "Tentang Kami", to: "/tentang" },
-    { label: "Pusat Bantuan", to: "/bantuan" },
+    { label: "Pusat Bantuan", to: "/pusat-bantuan" },
     { label: "Donatur Kami", to: "/donatur" },
   ];
   const restaurantNabvar = [
     { label: "Tentang Kami", to: "/tentang" },
-    { label: "Pusat Bantuan", to: "/bantuan" },
+    { label: "Pusat Bantuan", to: "/pusat-bantuan" },
     { label: "Donatur Kami", to: "/donatur" },
     { label: "Donasi Makanan", to: "/donasi" },
     { label: "Daftar Yayasan", to: "/yayasan" },
   ];
   const foundationNabvar = [
     { label: "Tentang Kami", to: "/tentang" },
-    { label: "Pusat Bantuan", to: "/bantuan" },
+    { label: "Pusat Bantuan", to: "/pusat-bantuan" },
     { label: "Donatur Kami", to: "/donatur" },
     { label: "Sejarah Donasi", to: "" },
   ];

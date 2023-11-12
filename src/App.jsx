@@ -10,9 +10,9 @@ import {
   OrgList,
   About,
   Donor,
-  Support,
   Donation,
   Account,
+  SupportCenter,
 } from "./components/index.js";
 
 const App = () => {
@@ -31,9 +31,9 @@ const App = () => {
         />
         <Route path="/bergabung" element={<SignUp />} />
         <Route path="/yayasan" element={<OrgList />} />
-        <Route path="/tentang" element={<About />} />
+        <Route path="/tentang" element={<About />} />/
         <Route path="/donatur" element={<Donor />} />
-        <Route path="/bantuan" element={<Support />} />
+        <Route path="/pusat-bantuan" element={<SupportCenter />} />
         <Route path="/donasi" element={<Donation />} />
         <Route path="/akun" element={<Account userType={userType} />} />
       </Routes>
