@@ -68,7 +68,7 @@ const OrgList = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container min-h-screen">
       <h1 className="my-4 text-4xl font-bold">Daftar Yayasan</h1>
 
       <div className="xl:flex xl:gap-10">

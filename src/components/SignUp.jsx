@@ -20,7 +20,7 @@ const SignUp = () => {
   ];
 
   return (
-    <div className="container">
+    <div className="container min-h-screen">
       <div className="xl:flex xl:gap-10">
         <div className="my-4 flex h-fit w-full justify-between gap-3 rounded-2xl bg-wb-lightgray p-2 xl:my-0 xl:block xl:w-96 xl:p-8">
           <h1 className="hidden text-3xl font-bold text-wb-gray xl:block">

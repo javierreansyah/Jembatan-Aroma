@@ -73,7 +73,7 @@ const Donation = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container min-h-screen">
       <div className="xl:flex xl:gap-10">
         <div className="mb-8 w-full space-y-8 xl:w-96">
           <div className="h-fit w-full justify-between gap-3 rounded-3xl bg-wb-lightgray p-4 md:p-2 xl:p-8">

@@ -11,24 +11,24 @@ import verificationPhoto from "../assets/images/home-process/verification.png";
 const Home = () => {
   const testimonies = [
     {
-      text: "Lorem ipsum dolor sit amet dolor sit consectetur eget maecenas sapien fusce egestas risus purus suspendisse turpis volutpat onare",
+      text: "Dengan Jembatan Aroma, restoran kami dapat menyumbangkan makanan berlebih dengan mudah dan aman. Kami merasa senang bisa berkontribusi dalam mengurangi pemborosan makanan dan membantu komunitas yang membutuhkan. Platform ini sangat membantu dan kami bangga menjadi bagian dari usaha ini.",
       sender: "Ibu Hajah",
-      org: "Warung Padang Sholehah",
+      org: "Padang Murah Malang",
     },
     {
-      text: "Lorem ipsum dolor sit amet dolor sit consectetur eget maecenas sapien fusce egestas risus purus suspendisse turpis volutpat onare",
-      sender: "Pak Wo Klaten",
-      org: "Sop Ayam Pak Wo",
+      text: "Sebagai yayasan yang peduli dengan isu pangan, Jembatan Aroma telah memberikan solusi yang luar biasa bagi kami. Kami dapat dengan cepat menemukan restoran dan bisnis kuliner yang bersedia menyumbangkan makanan berlebih mereka. Dengan bantuan Jembatan Aroma, kami dapat menerima bantuan pangan dan membantu kondisi finasnial yayasan kami.",
+      sender: "Pak Bari",
+      org: "Yayasan Abdul Bari",
     },
     {
-      text: "Lorem ipsum dolor sit amet dolor sit consectetur eget maecenas sapien fusce egestas risus purus suspendisse turpis volutpat onare ",
+      text: "Donasi makanan yang kami terima melalui Jembatan Aroma telah memberikan sentuhan kasih dan kehangatan kepada mereka yang tengah mengalami kesulitan. Proses konfirmasi donasi yang mudah dan cepat membuat kerja kami menjadi lebih efisien, dan kami berterima kasih kepada Jembatan Aroma atas perannya sebagai penghubung antara sumber makanan dan penerima manfaat",
       sender: "Ibu Suhartatik",
-      org: "RM. Suhartatik",
+      org: "Yayasan Qolbun Salim",
     },
   ];
   return (
     <>
-      <div className="container mb-8 py-24 md:py-0 lg:mb-0">
+      <div className="container mb-8 min-h-screen py-24 md:py-0 lg:mb-0">
         <div className="md:py-32 lg:flex lg:h-screen lg:items-center lg:justify-between lg:gap-20">
           <div className="flex w-full items-center lg:pb-32">
             <div className="w-full">
@@ -115,14 +115,14 @@ const Home = () => {
         </div>
 
         <div className="container relative w-full py-32">
-          <h1 className="mb-8 text-center text-4xl font-bold text-wb-white xl:text-5xl">
+          <h1 className="mb-12 text-center text-4xl font-bold text-wb-white xl:text-5xl">
             Apa Kata Mereka
           </h1>
           <div className="space-y-10 xl:flex xl:w-full xl:gap-10 xl:space-y-0">
             {testimonies.map((testimony, index) => (
               <div key={index} className="flex justify-center">
-                <div className="max-w-2xl rounded-2xl bg-wb-white p-8 shadow-2xl">
-                  <p className="mb-6">{testimony.text}</p>
+                <div className="max-w-2xl rounded-2xl bg-wb-white p-10 shadow-2xl">
+                  <p className="mb-6 xl:h-[325px]">{testimony.text}</p>
                   <div className="flex gap-4">
                     <div className="h-12 w-12 flex-none rounded-full bg-wb-red"></div>
                     <div>
@@ -191,8 +191,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      <div className="h-screen"></div>
     </>
   );
 };
