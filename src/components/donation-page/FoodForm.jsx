@@ -82,7 +82,7 @@ const FoodForm = ({ display, foodList, setFoodList }) => {
           <div className="pt-3">
             <button
               type="submit"
-              className="rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white"
+              className="rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red"
             >
               Tambahkan Makanan
             </button>
@@ -132,7 +132,7 @@ const FoodForm = ({ display, foodList, setFoodList }) => {
                   <div className="pt-4 sm:w-28 sm:pt-0 sm:text-right">
                     <button
                       onClick={() => handleDelete(index)}
-                      className="rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white"
+                      className="rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red"
                     >
                       Hapus
                     </button>

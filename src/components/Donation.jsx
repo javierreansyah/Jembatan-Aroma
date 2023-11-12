@@ -125,13 +125,13 @@ const Donation = () => {
 
           <div className="mt-8 flex h-fit w-full justify-between rounded-3xl bg-wb-lightgray p-8">
             <button
-              className="rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white"
+              className="rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red"
               onClick={goToPreviousPage}
             >
               Back
             </button>
             <button
-              className="rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white"
+              className="rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red"
               onClick={goToNextPage}
             >
               Next

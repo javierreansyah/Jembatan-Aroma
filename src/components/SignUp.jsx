@@ -50,13 +50,13 @@ const SignUp = () => {
 
           <div className="flex h-fit w-full justify-between rounded-2xl bg-wb-lightgray p-8">
             <button
-              className="mr-3 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white lg:mr-0"
+              className="mr-3 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red lg:mr-0"
               onClick={goToPreviousPage}
             >
               Back
             </button>
             <button
-              className="mr-3 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white lg:mr-0"
+              className="mr-3 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red lg:mr-0"
               onClick={goToNextPage}
             >
               Next

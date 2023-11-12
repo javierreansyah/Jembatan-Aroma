@@ -28,7 +28,7 @@ const ChoosePhilantrophy = ({ display, filteredOrgs, handleChooseOrg }) => {
                   <p>Halal: {org.halal}</p>
                 </div>
                 <button
-                  className="w-fit rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white"
+                  className="w-fit rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red"
                   onClick={() => handleChooseOrg(index)}
                 >
                   Pilih

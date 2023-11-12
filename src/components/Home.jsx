@@ -41,14 +41,14 @@ const Home = () => {
               </p>
               <div className="mt-8 sm:flex sm:gap-4">
                 <Link
+                  to="/masuk"
                   className="my-4 block w-full rounded-full border-2 border-wb-redorange bg-wb-redorange 
-                px-4 py-3 text-center text-sm font-semibold text-wb-white sm:my-0 sm:w-32"
+                px-4 py-3 text-center text-sm font-semibold text-wb-white hover:bg-wb-red sm:my-0 sm:w-32"
                 >
                   Masuk
                 </Link>
                 <Link
-                  className="block w-full rounded-full border-2 border-wb-redorange 
-              bg-wb-white px-4 py-3 text-center text-sm font-semibold text-wb-redorange sm:w-32"
+                  className="block w-full rounded-full border-2 border-wb-redorange bg-wb-white px-4 py-3 text-center text-sm font-semibold text-wb-redorange hover:border-wb-red hover:text-wb-red sm:w-32"
                   to="/bergabung"
                 >
                   Bergabung
@@ -98,7 +98,7 @@ const Home = () => {
             <Link
               to="/tentang"
               className="block w-full rounded-full border-2 border-wb-redorange bg-wb-redorange 
-                px-4 py-3 text-center text-sm font-semibold text-wb-white sm:w-fit"
+                px-4 py-3 text-center text-sm font-semibold text-wb-white hover:bg-wb-red sm:w-fit"
             >
               Selengkapnya
             </Link>

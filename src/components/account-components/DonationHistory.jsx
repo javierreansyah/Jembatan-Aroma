@@ -33,7 +33,7 @@ const DonationHistory = ({ display, userType }) => {
             className={`${
               historyOption === "berjalan"
                 ? "bg-wb-red text-wb-white"
-                : "bg-wb-lightgray2 text-wb-gray hover:bg-wb-orangeyellow hover:text-wb-white"
+                : "bg-wb-lightgray2 text-wb-gray hover:bg-wb-orange hover:text-wb-white"
             }  flex w-full flex-1 justify-center rounded-full px-2 py-3 text-center text-xs font-semibold md:py-4 lg:text-sm xl:py-2`}
           >
             Donasi Berjalan
@@ -106,7 +106,7 @@ const DonationHistory = ({ display, userType }) => {
                     <div>
                       <button
                         onClick={() => handleToggleDetails(index)}
-                        className="rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white"
+                        className="rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red"
                       >
                         {showDetails[index]
                           ? "Sembunyikan"
@@ -116,7 +116,7 @@ const DonationHistory = ({ display, userType }) => {
                     <div>
                       {userType === "restoran" &&
                         current.status === "diterima" && (
-                          <button className="rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white">
+                          <button className="rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red">
                             Lihat Ulasan
                           </button>
                         )}

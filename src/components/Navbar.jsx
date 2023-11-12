@@ -48,7 +48,11 @@ const Navbar = ({ userType }) => {
           <div className="flex items-center">
             <ul className="hidden lg:block">
               {currentNavbar().map((link, index) => (
-                <Link key={index} to={link.to} className="mr-6 text-sm">
+                <Link
+                  key={index}
+                  to={link.to}
+                  className="mr-6 text-sm hover:text-wb-red"
+                >
                   {link.label}
                 </Link>
               ))}
@@ -57,13 +61,13 @@ const Navbar = ({ userType }) => {
               <div className="flex">
                 <Link
                   to="/masuk"
-                  className="mr-3 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white"
+                  className="mr-3 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red"
                 >
                   Masuk
                 </Link>
                 <Link
                   to="/bergabung"
-                  className="mr-3 hidden rounded-full border-2 border-wb-redorange bg-wb-white px-4 py-1 text-sm font-semibold text-wb-redorange lg:mr-0 lg:block"
+                  className="mr-3 hidden rounded-full border-2 border-wb-redorange bg-wb-white px-4 py-1 text-sm font-semibold text-wb-redorange hover:border-wb-red hover:text-wb-red lg:mr-0 lg:block"
                 >
                   Bergabung
                 </Link>
@@ -72,13 +76,13 @@ const Navbar = ({ userType }) => {
             {(userType === "restoran" || userType === "yayasan") && (
               <Link
                 to="/akun"
-                className="mr-3 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white"
+                className="mr-3 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red"
               >
                 Akun
               </Link>
             )}
             <button
-              className="flex items-center rounded-full border-2 border-wb-redorange px-4 py-1 text-sm font-semibold text-wb-redorange lg:hidden"
+              className="flex items-center rounded-full border-2 border-wb-redorange px-4 py-1 text-sm font-semibold text-wb-redorange hover:bg-wb-red lg:hidden"
               onClick={toggleSidebar}
             >
               <p className="mr-2">Menu</p>

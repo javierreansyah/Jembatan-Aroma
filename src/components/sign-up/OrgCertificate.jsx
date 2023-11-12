@@ -58,7 +58,7 @@ const OrgCertificate = ({ display }) => {
             <div className="flex items-center">
               <label
                 htmlFor="cer-owner"
-                className="hover-bg-wb-red my-3 cursor-pointer rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white"
+                className="hover-bg-wb-red my-3 cursor-pointer rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red"
               >
                 Upload Sertifikat Lembaga
               </label>

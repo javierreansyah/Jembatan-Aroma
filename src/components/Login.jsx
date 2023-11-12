@@ -64,19 +64,19 @@ const Login = ({ setUserType }) => {
                   type="checkbox"
                   label="Ingat Saya"
                 />
-                <Link className="">Lupa Password?</Link>
+                <Link className="hover:text-wb-red">Lupa Password?</Link>
               </div>
               <div className="w-full space-y-4 md:flex md:items-center md:gap-4 md:space-y-0">
                 <button
                   type="submit"
-                  className="w-full rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-2 text-sm font-semibold text-wb-white"
+                  className="w-full rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-2 text-sm font-semibold text-wb-white hover:bg-wb-red"
                 >
                   Login
                 </button>
 
                 <Link
                   to="/bergabung"
-                  className="flex w-full justify-center rounded-full border-2 border-wb-redorange bg-wb-white px-4 py-2 text-sm font-semibold text-wb-redorange"
+                  className="flex w-full justify-center rounded-full border-2 border-wb-redorange bg-wb-white px-4 py-2 text-sm font-semibold text-wb-redorange hover:border-wb-red hover:text-wb-red"
                 >
                   Bergabung
                 </Link>

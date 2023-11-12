@@ -75,7 +75,7 @@ const SupportCenter = () => {
                 className={`${
                   flow.selected
                     ? "bg-wb-red text-wb-white"
-                    : "bg-wb-lightgray2 text-wb-gray hover:bg-wb-orangeyellow hover:text-wb-white"
+                    : "hover: hover:bg-wb-lightergray bg-wb-lightgray2 text-wb-gray hover:text-wb-white"
                 }  flex-1 cursor-pointer rounded-full px-2 py-2 text-center text-xs font-semibold lg:text-sm xl:mb-4`}
               >
                 {flow.label}
