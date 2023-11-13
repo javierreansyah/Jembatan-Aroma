@@ -184,7 +184,6 @@ const DonationHistory = ({ display, userType }) => {
             </div>
           ))}
         </div>
-        <div></div>
       </div>
     </div>
   );

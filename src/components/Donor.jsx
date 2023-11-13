@@ -17,16 +17,24 @@ const Donor = () => {
         <h1 className="mb-10 text-center text-3xl font-bold text-wb-gray">
           Donatur Kami
         </h1>
-        <div className="columns-1 gap-10 space-y-10 sm:columns-2 lg:columns-3 xl:columns-4">
-          <img src={Solaria} alt="Solaria Logo" />
-          <img src={Grab} alt="Grab Logo" />
-          <img src={JCO} alt="JCO Logo" />
-          <img src={filkom} alt="FILKOM Logo" />
-          <img className="scale-50" src={UB} alt="UB Logo" />
-          <img src={tehBotol} alt="Teh Botol Logo" />
-          <img src={preksu} alt="Preksu Logo" />
-          <img src={BCA} alt="BCA Logo" />
-          <img src={dunkinDonut} alt="Dunkin Donut Logo" />
+        <div className="grid grid-cols-3 items-center gap-4">
+          <img className="h-auto max-w-full" src={Solaria} alt="Solaria Logo" />
+          <img className="h-auto max-w-full" src={Grab} alt="Grab Logo" />
+          <img className="h-auto max-w-full" src={JCO} alt="JCO Logo" />
+          <img className="h-auto max-w-full" src={filkom} alt="FILKOM Logo" />  
+          <img className="h-auto max-w-full scale-50" src={UB} alt="UB Logo" />
+          <img
+            className="h-auto max-w-full"
+            src={tehBotol}
+            alt="Teh Botol Logo"
+          />
+          <img className="h-auto max-w-full" src={preksu} alt="Preksu Logo" />
+          <img className="h-auto max-w-full" src={BCA} alt="BCA Logo" />
+          <img
+            className="h-auto max-w-full"
+            src={dunkinDonut}
+            alt="Dunkin Donut Logo"
+          />
         </div>
       </div>
     </div>
