@@ -60,7 +60,7 @@ const SupportCenter = () => {
     },
   };
   return (
-    <section className="container">
+    <section className="container min-h-screen">
       <div className="xl:flex xl:gap-10">
         <div className="my-4 flex h-fit w-full justify-between gap-3 rounded-2xl bg-wb-lightgray p-2 xl:my-0 xl:block xl:w-96 xl:p-8">
           <h1 className="hidden text-3xl font-bold text-wb-gray xl:block">
@@ -75,7 +75,7 @@ const SupportCenter = () => {
                 className={`${
                   flow.selected
                     ? "bg-wb-red text-wb-white"
-                    : "hover: hover:bg-wb-lightergray bg-wb-lightgray2 text-wb-gray hover:text-wb-white"
+                    : "hover: bg-wb-lightgray2 text-wb-gray hover:bg-wb-lightergray hover:text-wb-white"
                 }  flex-1 cursor-pointer rounded-full px-2 py-2 text-center text-xs font-semibold lg:text-sm xl:mb-4`}
               >
                 {flow.label}

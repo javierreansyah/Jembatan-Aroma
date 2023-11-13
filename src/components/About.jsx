@@ -26,7 +26,7 @@ const About = () => {
         </div>
         <div className="container relative space-y-10">
           <div className="flex justify-center">
-            <img src={Logo} alt="" className="md:max-w-xl" />
+            <img src={Logo} alt="Logo Images" className="md:max-w-xl" />
           </div>
           <div className="flex justify-center">
             <p className="max-w-2xl text-center">

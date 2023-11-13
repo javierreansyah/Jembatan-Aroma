@@ -10,7 +10,6 @@ import OrgList from "./OrgList";
 import Clickable from "./forms/Clickable";
 import About from "./About";
 import Donor from "./Donor";
-import Support from "./Support";
 import Login from "./Login";
 import Donation from "./Donation";
 import ChoosePhilantrophy from "./donation-page/ChoosePhilantrophy.jsx";
@@ -42,7 +41,6 @@ export {
   Clickable,
   About,
   Donor,
-  Support,
   Login,
   Donation,
   ChoosePhilantrophy,

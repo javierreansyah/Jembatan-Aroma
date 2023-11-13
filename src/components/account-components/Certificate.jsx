@@ -12,12 +12,20 @@ const Certificate = ({ display, userType }) => {
         <hr className="my-4 w-full border-t border-gray-200" />
         {userType === "restoran" && (
           <div>
-            <img src={restaurantCertificate} className="my-4" />
+            <img
+              src={restaurantCertificate}
+              alt="Restaurant Certificate"
+              className="my-4"
+            />
           </div>
         )}
         {userType === "yayasan" && (
           <div>
-            <img src={philantrophyCertificate} className="my-4" />
+            <img
+              src={philantrophyCertificate}
+              alt="Philantrophy Certificate"
+              className="my-4"
+            />
           </div>
         )}
       </div>

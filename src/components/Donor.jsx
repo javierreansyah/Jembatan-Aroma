@@ -18,15 +18,15 @@ const Donor = () => {
           Donatur Kami
         </h1>
         <div className="columns-1 gap-10 space-y-10 sm:columns-2 lg:columns-3 xl:columns-4">
-          <img src={Solaria} />
-          <img src={Grab} />
-          <img src={JCO} />
-          <img src={filkom} />
-          <img className="scale-50" src={UB} />
-          <img src={tehBotol} />
-          <img src={preksu} />
-          <img src={BCA} />
-          <img src={dunkinDonut} />
+          <img src={Solaria} alt="Solaria Logo" />
+          <img src={Grab} alt="Grab Logo" />
+          <img src={JCO} alt="JCO Logo" />
+          <img src={filkom} alt="FILKOM Logo" />
+          <img className="scale-50" src={UB} alt="UB Logo" />
+          <img src={tehBotol} alt="Teh Botol Logo" />
+          <img src={preksu} alt="Preksu Logo" />
+          <img src={BCA} alt="BCA Logo" />
+          <img src={dunkinDonut} alt="Dunkin Donut Logo" />
         </div>
       </div>
     </div>

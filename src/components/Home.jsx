@@ -107,7 +107,7 @@ const Home = ({ userType }) => {
       <div className="container">
         <div className="items-center justify-between gap-20 space-y-8 py-32 md:flex md:space-y-0">
           <div className="">
-            <img src={Description} alt="" />
+            <img src={Description} alt="Donations Courier" />
           </div>
           <div className="w-full space-y-5">
             <h1 className="text-4xl font-bold text-wb-redorange">
@@ -171,7 +171,7 @@ const Home = ({ userType }) => {
                 <div className="flex h-fit items-center sm:h-[200px]">
                   <img
                     src={regPhoto}
-                    alt=""
+                    alt="Registration Icon"
                     className="min-w-[96px] max-w-[150px]"
                   />
                 </div>
@@ -182,7 +182,7 @@ const Home = ({ userType }) => {
                 <div className="flex h-fit items-center sm:h-[200px]">
                   <img
                     src={loginPhoto}
-                    alt=""
+                    alt="Login Icon"
                     className="relative -inset-x-6 min-w-[100px] max-w-[150px]"
                   />
                 </div>
@@ -195,7 +195,7 @@ const Home = ({ userType }) => {
                 <div className="flex h-fit items-center sm:h-[200px]">
                   <img
                     src={verificationPhoto}
-                    alt=""
+                    alt="Verification Icon"
                     className="relative inset-x-4 min-w-[100px] max-w-[150px]"
                   />
                 </div>
@@ -206,7 +206,7 @@ const Home = ({ userType }) => {
                 <div className="flex h-fit items-center sm:h-[200px]">
                   <img
                     src={donationPhoto}
-                    alt=""
+                    alt="Donation Icon"
                     className="min-w-[100px] max-w-[150px]"
                   />
                 </div>

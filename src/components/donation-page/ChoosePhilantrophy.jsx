@@ -25,7 +25,7 @@ const ChoosePhilantrophy = ({
             >
               <img
                 src={org.img}
-                alt=""
+                alt="Organisation Image"
                 className="mb-4 w-full rounded-xl sm:mb-0 sm:w-48"
               />
               <div className="flex flex-col justify-between">
