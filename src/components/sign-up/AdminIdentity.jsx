@@ -16,7 +16,7 @@ const AdminIdentity = ({ display }) => {
       <div className="mb-8 h-fit w-full rounded-2xl bg-wb-lightgray p-8">
         <h1 className="text-3xl font-bold text-wb-gray">Identitas Pengelola</h1>
         <hr className="my-4 w-full border-t border-gray-200" />
-        <form>
+        <form className="space-y-3">
           <Input
             id="adm-name"
             type="text"
@@ -60,10 +60,7 @@ const AdminIdentity = ({ display }) => {
               />
               {admScanKTP && (
                 <div className="ml-3">
-                  <p className="text-base font-medium text-wb-gray">
-                    Nama File:
-                    <span className="my-3 font-bold"> {admScanKTP.name}</span>
-                  </p>
+                  <p className="font-semibold">{admScanKTP.name}</p>
                 </div>
               )}
             </div>

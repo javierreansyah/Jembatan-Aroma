@@ -13,7 +13,7 @@ const OrgInformation = ({ display }) => {
           Isikan Informasi Lembaga Anda
         </h1>
         <hr className="my-4 w-full border-t border-gray-200" />
-        <form>
+        <form className="space-y-3">
           <Input
             id="org-name"
             type="text"

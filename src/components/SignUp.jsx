@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { OrgInformation, AdminIdentity, OrgCertificate } from "./index";
 
 const SignUp = () => {
@@ -55,12 +56,22 @@ const SignUp = () => {
             >
               Back
             </button>
-            <button
-              className="mr-3 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red lg:mr-0"
-              onClick={goToNextPage}
-            >
-              Next
-            </button>
+            {currentPage !== 3 && (
+              <button
+                className="mr-3 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red lg:mr-0"
+                onClick={goToNextPage}
+              >
+                Next
+              </button>
+            )}
+            {currentPage === 3 && (
+              <Link
+                className="mr-3 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red lg:mr-0"
+                to="/masuk"
+              >
+                Buat Akun
+              </Link>
+            )}
           </div>
         </div>
       </div>

@@ -43,10 +43,7 @@ const OrgCertificate = ({ display }) => {
               />
               {cerPhoto && (
                 <div className="ml-3">
-                  <p className="text-sm font-medium text-wb-gray">
-                    Nama File:{" "}
-                    <span className="my-3 font-bold"> {cerPhoto.name}</span>
-                  </p>
+                  <p className="text-sm font-semibold">{cerPhoto.name}</p>
                 </div>
               )}
             </div>
@@ -70,10 +67,9 @@ const OrgCertificate = ({ display }) => {
               />
               {cerOwner && (
                 <div className="ml-3">
-                  <p className="my-3 text-sm font-medium text-wb-gray">
-                    Nama File:
-                    <span className="my-3 font-bold"> {cerOwner.name}</span>
-                  </p>
+                  <div className="ml-3">
+                    <p className="text-sm font-semibold">{cerOwner.name}</p>
+                  </div>
                 </div>
               )}
             </div>
