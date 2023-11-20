@@ -17,12 +17,16 @@ const Donor = () => {
         <h1 className="mb-10 text-center text-3xl font-bold text-wb-gray">
           Donatur Kami
         </h1>
-        <div className="grid grid-cols-3 items-center gap-4">
-          <img className="h-auto max-w-full" src={Solaria} alt="Solaria Logo" />
+        <div className="grid grid-cols-3 items-center gap-20">
+          <img className="h-auto max-w-full scale-75" src={UB} alt="UB Logo" />
+          <img className="h-auto max-w-full" src={filkom} alt="FILKOM Logo" />
+          <img
+            className="h-auto max-w-full scale-75"
+            src={Solaria}
+            alt="Solaria Logo"
+          />
           <img className="h-auto max-w-full" src={Grab} alt="Grab Logo" />
           <img className="h-auto max-w-full" src={JCO} alt="JCO Logo" />
-          <img className="h-auto max-w-full" src={filkom} alt="FILKOM Logo" />  
-          <img className="h-auto max-w-full scale-50" src={UB} alt="UB Logo" />
           <img
             className="h-auto max-w-full"
             src={tehBotol}
