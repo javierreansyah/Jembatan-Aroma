@@ -119,15 +119,6 @@ const ChoosePhilantropyFilter = ({ display, filters, setFilters }) => {
               label="Non Halal"
               onChange={handleHalalChange}
             />
-            <button
-              className="mt-4 rounded-2xl bg-wb-redorange px-4 py-1 text-wb-white hover:bg-wb-red xl:hidden"
-              onClick={toggleFilter}
-            >
-              Terapkan
-            </button>
-            <button className="mt-4 hidden rounded-2xl bg-wb-redorange px-4 py-1 text-wb-white hover:bg-wb-red xl:block">
-              Terapkan
-            </button>
           </div>
         </div>
       </div>

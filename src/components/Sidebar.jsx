@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/images/logo.png";
 import { Close } from "../assets/svg/svgindex.js";
+import { HiX } from "react-icons/hi";
+import { IconContext } from "react-icons";
 
 const Sidebar = ({ isSidebarOpen, toggleSidebar, userType, links }) => {
   const SidebarLink = ({ to, label }) => {
@@ -31,15 +33,23 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar, userType, links }) => {
               className="flex items-center rounded-full border-2 border-wb-redorange px-4 py-1 text-sm font-semibold text-wb-redorange"
               onClick={toggleSidebar}
             >
-              <p className="mr-2">Tutup</p>
-              <Close />
+              <p className="mr-1">Tutup</p>
+              <IconContext.Provider
+                value={{
+                  size: "20px",
+                }}
+              >
+                <div>
+                  <HiX />
+                </div>
+              </IconContext.Provider>
             </button>
           </div>
           <hr className="my-4 w-full border-t border-gray-200 xl:block" />
           <div>
             {userType === "guest" && (
               <div>
-                <SidebarLink to="/" label="Masuk" />
+                <SidebarLink to="/masuk" label="Masuk" />
                 <SidebarLink to="/bergabung" label="Bergabung" />
               </div>
             )}

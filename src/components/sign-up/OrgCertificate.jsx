@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { IconContext } from "react-icons";
+import { HiArrowCircleRight } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 const OrgCertificate = ({ display }) => {
   const [cerPhoto, setCerPhoto] = useState(null);
@@ -75,6 +78,24 @@ const OrgCertificate = ({ display }) => {
             </div>
           </div>
         </form>
+
+        <Link
+          className="mr-3 flex w-fit rounded-full border-2 border-wb-redorange bg-wb-redorange px-1 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red lg:mr-0"
+          to="/masuk"
+        >
+          <div className="flex">
+            <p className="mr-1 pl-2">Buat Akun</p>
+            <IconContext.Provider
+              value={{
+                size: "20px",
+              }}
+            >
+              <div>
+                <HiArrowCircleRight />
+              </div>
+            </IconContext.Provider>
+          </div>
+        </Link>
       </div>
     </div>
   );

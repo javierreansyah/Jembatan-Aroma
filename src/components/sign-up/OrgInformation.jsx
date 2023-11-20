@@ -1,7 +1,9 @@
 import React from "react";
 import { Input, Select } from "../index";
+import { IconContext } from "react-icons";
+import { HiArrowCircleRight } from "react-icons/hi";
 
-const OrgInformation = ({ display }) => {
+const OrgInformation = ({ display, handleNextPage }) => {
   const orgSelectOption = [
     { value: "restoran", label: "Restoran" },
     { value: "yayasan", label: "Yayasan" },
@@ -56,6 +58,24 @@ const OrgInformation = ({ display }) => {
             label="Alamat Lembaga"
           />
         </form>
+        <button
+          className={`mt-6 rounded-full border-2 border-wb-redorange 
+                bg-wb-redorange px-1 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red disabled:border-wb-lightgray2 disabled:bg-wb-lightgray2 disabled:text-wb-black`}
+          onClick={handleNextPage}
+        >
+          <div className="flex">
+            <p className="mr-1 pl-2">Lanjutkan</p>
+            <IconContext.Provider
+              value={{
+                size: "20px",
+              }}
+            >
+              <div>
+                <HiArrowCircleRight />
+              </div>
+            </IconContext.Provider>
+          </div>
+        </button>
       </div>
     </div>
   );

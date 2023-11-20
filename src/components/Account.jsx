@@ -2,6 +2,8 @@ import React from "react";
 import { Profile, DonationHistory, Certificate } from "./index.js";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { IconContext } from "react-icons";
+import { HiArrowCircleRight } from "react-icons/hi";
 
 const Account = ({ userType, setUserType }) => {
   const [currentPage, setCurrentPage] = useState("profil");
@@ -43,18 +45,40 @@ const Account = ({ userType, setUserType }) => {
                 className={`${
                   option.selected
                     ? "bg-wb-red text-wb-white"
-                    : " hover:bg-wb-lightergray bg-wb-lightgray2 text-wb-gray  hover:text-wb-white"
-                }  flex w-full flex-1 justify-center rounded-full px-2 py-3 text-center text-xs font-semibold md:py-4 lg:text-sm xl:mb-4 xl:py-2`}
+                    : " bg-wb-lightgray2 text-wb-gray hover:bg-wb-lightergray  hover:text-wb-white"
+                }  flex w-full flex-1 justify-center rounded-full px-2 py-3 text-center text-xs font-semibold md:py-4 md:text-sm xl:mb-4 xl:py-2`}
               >
-                {option.label}
+                <div className="flex w-full items-center justify-between md:px-4 xl:px-0">
+                  <p className="mr-1 pl-2">{option.label}</p>
+                  <IconContext.Provider
+                    value={{
+                      size: "24px",
+                    }}
+                  >
+                    <div>
+                      <HiArrowCircleRight />
+                    </div>
+                  </IconContext.Provider>
+                </div>
               </button>
             ))}
             <button
               onClick={handleLogout}
-              className="hover:bg-wb-lightergray xl:py- flex  w-full flex-1 justify-center rounded-full bg-wb-lightgray2 
-              px-2 py-3 text-center text-xs font-semibold text-wb-gray hover:text-wb-white md:py-4 lg:text-sm xl:mb-4 xl:py-2"
+              className="xl:py- flex w-full  flex-1 justify-center rounded-full bg-wb-lightgray2 px-2 
+              py-3 text-center text-xs font-semibold text-wb-gray hover:bg-wb-lightergray hover:text-wb-white md:py-4 md:text-sm xl:mb-4 xl:py-2"
             >
-              Keluar
+              <div className="flex w-full items-center justify-between md:px-4 xl:px-0">
+                <p className="mr-1 pl-2">Keluar</p>
+                <IconContext.Provider
+                  value={{
+                    size: "24px",
+                  }}
+                >
+                  <div>
+                    <HiArrowCircleRight />
+                  </div>
+                </IconContext.Provider>
+              </div>
             </button>
           </div>
         </div>

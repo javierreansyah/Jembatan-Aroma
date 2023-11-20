@@ -7,23 +7,31 @@ import donationPhoto from "../assets/images/home-process/donation.png";
 import loginPhoto from "../assets/images/home-process/login.png";
 import regPhoto from "../assets/images/home-process/reg.png";
 import verificationPhoto from "../assets/images/home-process/verification.png";
+import { HiArrowCircleRight, HiOutlineArrowCircleRight } from "react-icons/hi";
+import { IconContext } from "react-icons";
+import Hajah from "../assets/images/testimonies/hajah.jpeg";
+import Bari from "../assets/images/testimonies/bari.jpg";
+import Suhartatik from "../assets/images/testimonies/suhartatik.jpg";
 
-const Home = ({ userType }) => {
+const Home = ({ userType, handleNextPage }) => {
   const testimonies = [
     {
       text: "Dengan Jembatan Aroma, restoran kami dapat menyumbangkan makanan berlebih dengan mudah dan aman. Kami merasa senang bisa berkontribusi dalam mengurangi pemborosan makanan dan membantu komunitas yang membutuhkan. Platform ini sangat membantu dan kami bangga menjadi bagian dari usaha ini.",
       sender: "Ibu Hajah",
       org: "Padang Murah Malang",
+      img: Hajah,
     },
     {
       text: "Sebagai yayasan yang peduli dengan isu pangan, Jembatan Aroma telah memberikan solusi yang luar biasa bagi kami. Kami dapat dengan cepat menemukan restoran dan bisnis kuliner yang bersedia menyumbangkan makanan berlebih mereka. Dengan bantuan Jembatan Aroma, kami dapat menerima bantuan pangan dan membantu kondisi finasnial yayasan kami.",
       sender: "Pak Bari",
       org: "Yayasan Abdul Bari",
+      img: Bari,
     },
     {
       text: "Donasi makanan yang kami terima melalui Jembatan Aroma telah memberikan sentuhan kasih dan kehangatan kepada mereka yang tengah mengalami kesulitan. Proses konfirmasi donasi yang mudah dan cepat membuat kerja kami menjadi lebih efisien, dan kami berterima kasih kepada Jembatan Aroma atas perannya sebagai penghubung antara sumber makanan dan penerima manfaat",
       sender: "Ibu Suhartatik",
       org: "Yayasan Qolbun Salim",
+      img: Suhartatik,
     },
   ];
   return (
@@ -44,16 +52,38 @@ const Home = ({ userType }) => {
                   <Link
                     to="/masuk"
                     className="my-4 block w-full rounded-full border-2 border-wb-redorange bg-wb-redorange 
-                      px-4 py-3 text-center text-sm font-semibold text-wb-white hover:border-wb-orange hover:bg-wb-orange sm:my-0 sm:w-32"
+                      px-4 py-3 text-center text-sm font-semibold text-wb-white hover:border-wb-orange hover:bg-wb-orange sm:my-0 sm:w-40"
                   >
-                    Masuk
+                    <div className="flex items-center justify-between gap-2">
+                      <p className="pl-1">Masuk</p>
+                      <IconContext.Provider
+                        value={{
+                          size: "25px",
+                        }}
+                      >
+                        <div>
+                          <HiArrowCircleRight />
+                        </div>
+                      </IconContext.Provider>
+                    </div>
                   </Link>
                   <Link
                     className="block w-full rounded-full border-2 border-wb-redorange 
-                    bg-wb-white px-4 py-3 text-center text-sm font-semibold text-wb-redorange hover:border-wb-orange hover:bg-wb-orange hover:text-wb-white sm:w-32"
+                    bg-wb-white px-4 py-3 text-center text-sm font-semibold text-wb-redorange hover:border-wb-orange hover:bg-wb-orange hover:text-wb-white sm:w-40"
                     to="/bergabung"
                   >
-                    Bergabung
+                    <div className="flex items-center justify-between gap-2">
+                      <p className="pl-1">Bergabung</p>
+                      <IconContext.Provider
+                        value={{
+                          size: "25px",
+                        }}
+                      >
+                        <div>
+                          <HiOutlineArrowCircleRight />
+                        </div>
+                      </IconContext.Provider>
+                    </div>
                   </Link>
                 </div>
               )}
@@ -64,7 +94,19 @@ const Home = ({ userType }) => {
                       px-4 py-3 text-center text-sm font-semibold text-wb-white hover:border-wb-orange hover:bg-wb-orange sm:my-0 sm:w-fit"
                     to="/donasi"
                   >
-                    Donasi Sekarang
+                    <div className="flex items-center justify-between gap-2">
+                      <p>Donasi Sekarang</p>
+                      <IconContext.Provider
+                        value={{
+                          size: "25px",
+                          className: "global-class-name",
+                        }}
+                      >
+                        <div>
+                          <HiArrowCircleRight />
+                        </div>
+                      </IconContext.Provider>
+                    </div>
                   </Link>
                 </div>
               )}
@@ -75,7 +117,18 @@ const Home = ({ userType }) => {
                       px-4 py-3 text-center text-sm font-semibold text-wb-white hover:border-wb-orange hover:bg-wb-orange sm:my-0 sm:w-fit"
                     to="/akun"
                   >
-                    Sejarah Donasi
+                    <div className="flex items-center justify-between gap-2">
+                      <p className="pl-1">Sejarah Donasi</p>
+                      <IconContext.Provider
+                        value={{
+                          size: "25px",
+                        }}
+                      >
+                        <div>
+                          <HiArrowCircleRight />
+                        </div>
+                      </IconContext.Provider>
+                    </div>
                   </Link>
                 </div>
               )}
@@ -122,10 +175,21 @@ const Home = ({ userType }) => {
             </p>
             <Link
               to="/tentang"
-              className="block w-full rounded-full border-2 border-wb-redorange bg-wb-redorange 
-                px-4 py-3 text-center text-sm font-semibold text-wb-white hover:bg-wb-red sm:w-fit"
+              className="block w-fit rounded-full border-2 border-wb-redorange 
+                bg-wb-redorange px-4 py-3 text-center text-sm font-semibold text-wb-white hover:bg-wb-red"
             >
-              Selengkapnya
+              <div className="flex items-center justify-between gap-2">
+                <p className="pl-1">Selengkapnya</p>
+                <IconContext.Provider
+                  value={{
+                    size: "25px",
+                  }}
+                >
+                  <div>
+                    <HiArrowCircleRight />
+                  </div>
+                </IconContext.Provider>
+              </div>
             </Link>
           </div>
         </div>
@@ -149,7 +213,9 @@ const Home = ({ userType }) => {
                 <div className="max-w-2xl rounded-2xl bg-wb-white p-10 shadow-2xl">
                   <p className="mb-6 xl:h-[325px]">{testimony.text}</p>
                   <div className="flex gap-4">
-                    <div className="h-12 w-12 flex-none rounded-full bg-wb-red"></div>
+                    <div className="h-12 w-12 flex-none overflow-hidden rounded-full bg-wb-red">
+                      <img src={testimony.img} />
+                    </div>
                     <div>
                       <p className="font-bold">{testimony.sender}</p>
                       <p>{testimony.org}</p>

@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { Input, Select } from "../index";
+import { HiMiniPlusCircle } from "react-icons/hi2";
+import { IconContext } from "react-icons";
 
 const FoodForm = ({ display, foodList, setFoodList, handleNextPage }) => {
   const [foodName, setFoodName] = useState("");
@@ -82,9 +84,20 @@ const FoodForm = ({ display, foodList, setFoodList, handleNextPage }) => {
           <div className="pt-3">
             <button
               type="submit"
-              className="rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red"
+              className="rounded-full border-2 border-wb-redorange bg-wb-redorange px-2 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red"
             >
-              Tambahkan Makanan
+              <div className="flex">
+                <p className="mr-1 pl-1">Tambah</p>
+                <IconContext.Provider
+                  value={{
+                    size: "20px",
+                  }}
+                >
+                  <div>
+                    <HiMiniPlusCircle />
+                  </div>
+                </IconContext.Provider>
+              </div>
             </button>
           </div>
         </form>

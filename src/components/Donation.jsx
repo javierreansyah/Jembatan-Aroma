@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import React from "react";
 import orgData from "../constants/orgData.js";
 import { Clickable, ChoosePhilantropyFilter } from "./index.js";
+import { IconContext } from "react-icons";
+import { HiArrowCircleRight, HiArrowCircleLeft } from "react-icons/hi";
+
 import {
   ChoosePhilantrophy,
   DeliveryForm,
@@ -166,18 +169,40 @@ const Donation = () => {
             <button
               disabled={!canBack()}
               className={`rounded-full border-2 border-wb-redorange bg-wb-redorange 
-              px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red disabled:border-wb-lightgray2 disabled:bg-wb-lightgray2 disabled:text-wb-black`}
+              px-1 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red disabled:border-wb-lightgray2 disabled:bg-wb-lightgray2 disabled:text-wb-black`}
               onClick={goToPreviousPage}
             >
-              Back
+              <div className="flex">
+                <IconContext.Provider
+                  value={{
+                    size: "20px",
+                  }}
+                >
+                  <div>
+                    <HiArrowCircleLeft />
+                  </div>
+                </IconContext.Provider>
+                <p className="ml-1 pr-3">Kembali</p>
+              </div>
             </button>
             <button
               disabled={!canNext()}
               className={`rounded-full border-2 border-wb-redorange bg-wb-redorange 
-              px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red disabled:border-wb-lightgray2 disabled:bg-wb-lightgray2 disabled:text-wb-black`}
+              px-1 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red disabled:border-wb-lightgray2 disabled:bg-wb-lightgray2 disabled:text-wb-black`}
               onClick={goToNextPage}
             >
-              Next
+              <div className="flex">
+                <p className="mr-1 pl-3">Berikutnya</p>
+                <IconContext.Provider
+                  value={{
+                    size: "20px",
+                  }}
+                >
+                  <div>
+                    <HiArrowCircleRight />
+                  </div>
+                </IconContext.Provider>
+              </div>
             </button>
           </div>
         </div>

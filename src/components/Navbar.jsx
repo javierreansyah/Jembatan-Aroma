@@ -4,6 +4,8 @@ import Logo from "../assets/images/logo.png";
 import { Menu } from "../assets/svg/svgindex.js";
 import { Sidebar } from "./index.js";
 import { useState, useEffect } from "react";
+import { HiMenu, HiUserCircle } from "react-icons/hi";
+import { IconContext } from "react-icons";
 
 const Navbar = ({ userType }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -78,15 +80,34 @@ const Navbar = ({ userType }) => {
                 to="/akun"
                 className="mr-3 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red"
               >
-                Akun
+                <div className="flex">
+                  <p className="mr-1">Akun</p>
+                  <IconContext.Provider
+                    value={{
+                      size: "20px",
+                    }}
+                  >
+                    <div>
+                      <HiUserCircle />
+                    </div>
+                  </IconContext.Provider>
+                </div>
               </Link>
             )}
             <button
               className="flex items-center rounded-full border-2 border-wb-redorange px-4 py-1 text-sm font-semibold text-wb-redorange hover:border-wb-red hover:text-wb-red lg:hidden"
               onClick={toggleSidebar}
             >
-              <p className="mr-2">Menu</p>
-              <Menu />
+              <p className="mr-1">Menu</p>
+              <IconContext.Provider
+                value={{
+                  size: "18px",
+                }}
+              >
+                <div>
+                  <HiMenu />
+                </div>
+              </IconContext.Provider>
             </button>
           </div>
         </div>

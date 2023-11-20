@@ -2,9 +2,31 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { OrgInformation, AdminIdentity, OrgCertificate } from "./index";
+import { IconContext } from "react-icons";
+import { HiArrowCircleRight, HiArrowCircleLeft } from "react-icons/hi";
 
 const SignUp = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [maxPage, setMaxPage] = useState(1);
+
+  const continuePage = () => {
+    if (currentPage === 3) return;
+    if (currentPage < maxPage) {
+      goToNextPage();
+      return;
+    }
+    goToNextPage();
+    setMaxPage((prev) => prev + 1);
+  };
+
+  const canNext = () => {
+    if (currentPage === 6) return false;
+    return currentPage === maxPage ? false : true;
+  };
+
+  const canBack = () => {
+    return currentPage === 1 ? false : true;
+  };
 
   const goToNextPage = () => {
     setCurrentPage((prevPage) => Math.min(prevPage + 1, 3));
@@ -45,33 +67,59 @@ const SignUp = () => {
         </div>
 
         <div className="w-full">
-          <OrgInformation display={currentPage === 1} />
-          <AdminIdentity display={currentPage === 2} />
-          <OrgCertificate display={currentPage === 3} />
+          <OrgInformation
+            display={currentPage === 1}
+            handleNextPage={continuePage}
+          />
+          <AdminIdentity
+            display={currentPage === 2}
+            handleNextPage={continuePage}
+          />
+          <OrgCertificate
+            display={currentPage === 3}
+            handleNextPage={continuePage}
+          />
 
           <div className="flex h-fit w-full justify-between rounded-2xl bg-wb-lightgray p-8">
             <button
-              className="mr-3 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red lg:mr-0"
+              disabled={!canBack()}
+              className={`rounded-full border-2 border-wb-redorange bg-wb-redorange 
+              px-1 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red disabled:border-wb-lightgray2 disabled:bg-wb-lightgray2 disabled:text-wb-black`}
               onClick={goToPreviousPage}
             >
-              Back
+              <div className="flex">
+                <IconContext.Provider
+                  value={{
+                    size: "20px",
+                  }}
+                >
+                  <div>
+                    <HiArrowCircleLeft />
+                  </div>
+                </IconContext.Provider>
+                <p className="ml-1 pr-2">Kembali</p>
+              </div>
             </button>
-            {currentPage !== 3 && (
-              <button
-                className="mr-3 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red lg:mr-0"
-                onClick={goToNextPage}
-              >
-                Next
-              </button>
-            )}
-            {currentPage === 3 && (
-              <Link
-                className="mr-3 rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red lg:mr-0"
-                to="/masuk"
-              >
-                Buat Akun
-              </Link>
-            )}
+
+            <button
+              disabled={!canNext()}
+              className={`rounded-full border-2 border-wb-redorange bg-wb-redorange 
+                px-1 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red disabled:border-wb-lightgray2 disabled:bg-wb-lightgray2 disabled:text-wb-black`}
+              onClick={goToNextPage}
+            >
+              <div className="flex">
+                <p className="mr-1 pl-2">Berikutnya</p>
+                <IconContext.Provider
+                  value={{
+                    size: "20px",
+                  }}
+                >
+                  <div>
+                    <HiArrowCircleRight />
+                  </div>
+                </IconContext.Provider>
+              </div>
+            </button>
           </div>
         </div>
       </div>

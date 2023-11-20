@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import { IconContext } from "react-icons";
+import { HiArrowCircleRight } from "react-icons/hi";
 
 const SupportCenter = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -62,7 +64,7 @@ const SupportCenter = () => {
   return (
     <section className="container min-h-screen">
       <div className="xl:flex xl:gap-10">
-        <div className="my-4 flex h-fit w-full justify-between gap-3 rounded-2xl bg-wb-lightgray p-2 xl:my-0 xl:block xl:w-96 xl:p-8">
+        <div className="my-4 flex h-fit w-full justify-between gap-3 rounded-2xl bg-wb-lightgray p-4  xl:my-0 xl:block xl:w-96 xl:p-8">
           <h1 className="hidden text-3xl font-bold text-wb-gray xl:block">
             Pusat Bantuan
           </h1>
@@ -78,7 +80,18 @@ const SupportCenter = () => {
                     : "hover: bg-wb-lightgray2 text-wb-gray hover:bg-wb-lightergray hover:text-wb-white"
                 }  flex-1 cursor-pointer rounded-full px-2 py-2 text-center text-xs font-semibold lg:text-sm xl:mb-4`}
               >
-                {flow.label}
+                <div className="flex items-center justify-between">
+                  <p className="mr-1 pl-2">{flow.label}</p>
+                  <IconContext.Provider
+                    value={{
+                      size: "24px",
+                    }}
+                  >
+                    <div>
+                      <HiArrowCircleRight />
+                    </div>
+                  </IconContext.Provider>
+                </div>
               </div>
             ))}
           </div>

@@ -111,7 +111,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="relative bg-gradient-to-r from-wb-orange to-wb-redorange">
+      <div className="relative overflow-x-clip bg-gradient-to-r from-wb-orange to-wb-redorange">
         <div>
           <Triangle className="absolute -left-16 -top-16 rotate-75 scale-125" />
           <Triangle className="absolute left-32 top-20 hidden rotate-15 scale-75 sm:block" />
