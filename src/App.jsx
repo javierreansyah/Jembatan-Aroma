@@ -55,7 +55,6 @@ const App = () => {
         />
       </Routes>
       <Footer />
-      <ResponsiveHelper />
     </>
   );
 };
