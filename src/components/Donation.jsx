@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import React from "react";
-import orgData from "../constants/orgData.js";
+import orgData from "../constants/OrgData.js";
 import { Clickable, ChoosePhilantropyFilter } from "./index.js";
 import { IconContext } from "react-icons";
 import { HiArrowCircleRight, HiArrowCircleLeft } from "react-icons/hi";
