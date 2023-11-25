@@ -6,7 +6,7 @@ import filkom from "../assets/images/DonorIMG/filkom.png";
 import Ub from "../assets/images/DonorIMG/UniversitasBrawijaya.png";
 import tehBotol from "../assets/images/DonorIMG/TehBotol.png";
 import preksu from "../assets/images/DonorIMG/preksu.png";
-import Bca from "../assets/images/DonorIMG/BCA.png";
+import Bca from "../assets/images/DonorIMG/bca.png";
 import dunkinDonut from "../assets/images/DonorIMG/dunkindonut.png";
 
 const Donor = () => {
