@@ -1,5 +1,5 @@
 import React from "react";
-import orgData from "../constants/orgData.js";
+import orgData from "../constants/OrgData.js";
 import { Clickable } from "./index.js";
 import { useState } from "react";
 
