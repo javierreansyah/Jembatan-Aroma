@@ -6,7 +6,7 @@ import Tujuan from "../assets/images/tujuan.png";
 import Javier from "../assets/images/member/javier.jpg";
 import Haikal from "../assets/images/member/haikal.jpg";
 import Fauzi from "../assets/images/member/fauzi.jpg";
-import Herdi from "../assets/images/member/Herdi.jpg";
+import Herdi from "../assets/images/member/herdi.jpg";
 
 const About = () => {
   const members = [
