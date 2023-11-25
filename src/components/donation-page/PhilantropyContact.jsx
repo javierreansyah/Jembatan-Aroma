@@ -1,5 +1,5 @@
 import React from "react";
-import orgData from "../../constants/orgData";
+import orgData from "../../constants/OrgData.js";
 
 const PhilantropyContact = ({ display, orgIndex, handleNextPage }) => {
   const selectedOrg = orgData[orgIndex];
