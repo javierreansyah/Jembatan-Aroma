@@ -1,13 +1,12 @@
 import React from "react";
 import Solaria from "../assets/images/DonorIMG/solaria.png";
 import Grab from "../assets/images/DonorIMG/Grab.png";
-import JCO from "../assets/images/DonorIMG/JCO.png";
-import KFC from "../assets/images/DonorIMG/KFC.png";
+import Jco from "../assets/images/DonorIMG/JCO.png";
 import filkom from "../assets/images/DonorIMG/filkom.png";
-import UB from "../assets/images/DonorIMG/UniversitasBrawijaya.png";
+import Ub from "../assets/images/DonorIMG/UniversitasBrawijaya.png";
 import tehBotol from "../assets/images/DonorIMG/TehBotol.png";
 import preksu from "../assets/images/DonorIMG/preksu.png";
-import BCA from "../assets/images/DonorIMG/BCA.png";
+import Bca from "../assets/images/DonorIMG/BCA.png";
 import dunkinDonut from "../assets/images/DonorIMG/dunkindonut.png";
 
 const Donor = () => {
@@ -18,7 +17,7 @@ const Donor = () => {
           Donatur Kami
         </h1>
         <div className="grid grid-cols-3 items-center gap-20">
-          <img className="h-auto max-w-full scale-75" src={UB} alt="UB Logo" />
+          <img className="h-auto max-w-full scale-75" src={Ub} alt="UB Logo" />
           <img className="h-auto max-w-full" src={filkom} alt="FILKOM Logo" />
           <img
             className="h-auto max-w-full scale-75"
@@ -26,14 +25,14 @@ const Donor = () => {
             alt="Solaria Logo"
           />
           <img className="h-auto max-w-full" src={Grab} alt="Grab Logo" />
-          <img className="h-auto max-w-full" src={JCO} alt="JCO Logo" />
+          <img className="h-auto max-w-full" src={Jco} alt="JCO Logo" />
           <img
             className="h-auto max-w-full"
             src={tehBotol}
             alt="Teh Botol Logo"
           />
           <img className="h-auto max-w-full" src={preksu} alt="Preksu Logo" />
-          <img className="h-auto max-w-full" src={BCA} alt="BCA Logo" />
+          <img className="h-auto max-w-full" src={Bca} alt="BCA Logo" />
           <img
             className="h-auto max-w-full"
             src={dunkinDonut}
