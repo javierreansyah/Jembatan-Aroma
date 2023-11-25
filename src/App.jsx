@@ -32,7 +32,7 @@ const App = () => {
     return null; // This component doesn't render anything
   };
   return (
-    <>
+    <div className="overflow-hidden">
       <ScrollToTop />
       <Navbar userType={userType} />
       <Routes>
@@ -55,7 +55,7 @@ const App = () => {
         />
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 };
 
