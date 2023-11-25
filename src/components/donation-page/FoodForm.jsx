@@ -37,8 +37,10 @@ const FoodForm = ({ display, foodList, setFoodList, handleNextPage }) => {
 
   return (
     <div className={`${display ? "block" : "hidden"}`}>
-      <div className="mb-8 h-fit w-full rounded-3xl bg-wb-lightgray p-8">
-        <h1 className="text-3xl font-bold text-wb-gray">Tambahkan Makanan</h1>
+      <div className="mb-8 h-fit w-full rounded-3xl bg-wb-lightgray p-6 sm:p-8">
+        <h1 className="text-2xl font-bold text-wb-gray sm:text-3xl">
+          Tambahkan Makanan
+        </h1>
         <hr className="my-4 w-full border-t border-gray-200" />
         <form onSubmit={handleFoodSubmit} className="space-y-4">
           <Input
@@ -102,42 +104,44 @@ const FoodForm = ({ display, foodList, setFoodList, handleNextPage }) => {
           </div>
         </form>
       </div>
-      <div className="h-fit w-full rounded-3xl bg-wb-lightgray p-8">
+      <div className="h-fit w-full rounded-3xl bg-wb-lightgray p-6 sm:p-8">
         {foodList.length === 0 ? (
           <h1 className="text-3xl font-bold">Daftar Makanan Kosong</h1>
         ) : (
           <>
-            <h1 className="text-3xl font-bold">Daftar Makanan</h1>
+            <h1 className="text-2xl font-bold sm:text-3xl">Daftar Makanan</h1>
             <hr className="my-4 w-full border-t border-gray-200 xl:block" />
             <div className="space-y-6">
               {foodList.map((food, index) => (
                 <div
                   key={index}
-                  className="rounded-2xl bg-wb-white p-8 shadow-xl sm:flex"
+                  className="rounded-2xl bg-wb-white p-6 shadow-xl sm:flex sm:p-8"
                 >
                   <div className="flex w-full">
                     <div className="w-10 text-xl font-semibold">{food.id}.</div>
                     <div className="w-full">
                       <p className="text-xl font-semibold">{food.foodName}</p>
-                      <div className="flex gap-2">
-                        <p className="w-24 flex-none">Porsi</p>
-                        <p>:</p>
-                        <p>{food.portion}</p>
-                      </div>
-                      <div className="flex gap-2">
-                        <p className="w-24 flex-none">Simpan Di</p>
-                        <p>:</p>
-                        <p>{food.storing}</p>
-                      </div>
-                      <div className="flex gap-2">
-                        <p className="w-24 flex-none">Hangatkan</p>
-                        <p>:</p>
-                        <p>{food.reheat}</p>
-                      </div>
-                      <div className="flex gap-2">
-                        <p className="w-24 flex-none">Ketahanan</p>
-                        <p>:</p>
-                        <p>{food.lastingPeriod} hari</p>
+                      <div className="text-xs sm:text-base">
+                        <div className="flex gap-2">
+                          <p className="w-16 flex-none sm:w-24">Porsi</p>
+                          <p>:</p>
+                          <p>{food.portion}</p>
+                        </div>
+                        <div className="flex gap-2">
+                          <p className="w-16 flex-none sm:w-24">Simpan Di</p>
+                          <p>:</p>
+                          <p>{food.storing}</p>
+                        </div>
+                        <div className="flex gap-2">
+                          <p className="w-16 flex-none sm:w-24">Hangatkan</p>
+                          <p>:</p>
+                          <p>{food.reheat}</p>
+                        </div>
+                        <div className="flex gap-2">
+                          <p className="w-16 flex-none sm:w-24">Ketahanan</p>
+                          <p>:</p>
+                          <p>{food.lastingPeriod} hari</p>
+                        </div>
                       </div>
                     </div>
                   </div>

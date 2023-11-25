@@ -51,7 +51,7 @@ const ChoosePhilantropyFilter = ({ display, filters, setFilters }) => {
             <h1 className="text-3xl font-bold">Filter</h1>
             <button
               onClick={toggleFilter}
-              className="rounded-2xl bg-wb-redorange px-4 py-1 text-wb-white xl:hidden"
+              className="rounded-2xl bg-wb-redorange px-4 py-1 font-medium text-wb-white xl:hidden"
             >
               {isFilterOpen ? "Tutup" : "Tampilkan"}
             </button>

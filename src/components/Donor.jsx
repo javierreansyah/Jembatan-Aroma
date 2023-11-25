@@ -13,10 +13,8 @@ const Donor = () => {
   return (
     <div className="container min-h-screen">
       <div className="mb-8 h-fit w-full rounded-3xl bg-transparent p-8">
-        <h1 className="mb-10 text-center text-3xl font-bold text-wb-gray">
-          Donatur Kami
-        </h1>
-        <div className="grid grid-cols-3 items-center gap-20">
+        <h1 className="mb-10 text-center text-3xl font-bold">Donatur Kami</h1>
+        <div className="grid grid-cols-1 items-center gap-20 md:grid-cols-2 lg:grid-cols-3">
           <img className="h-auto max-w-full scale-75" src={Ub} alt="UB Logo" />
           <img className="h-auto max-w-full" src={filkom} alt="FILKOM Logo" />
           <img

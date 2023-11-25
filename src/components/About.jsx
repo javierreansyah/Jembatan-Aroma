@@ -42,7 +42,7 @@ const About = () => {
 
       <div className="bg-gradient-to-r from-wb-orangeyellow to-wb-redorange shadow-xl">
         <div className="container py-12">
-          <h1 className="text-center text-4xl font-bold text-wb-white md:text-5xl">
+          <h1 className="relative text-center text-4xl font-bold text-wb-white md:text-5xl">
             Tentang Kami
           </h1>
         </div>

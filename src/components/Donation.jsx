@@ -165,17 +165,17 @@ const Donation = () => {
             orgIndex={chosenOrg}
           />
 
-          <div className="mb-8 mt-8 flex h-fit w-full justify-between rounded-3xl bg-wb-lightgray p-8">
+          <div className="mb-8 mt-8 flex h-fit w-full justify-between rounded-3xl bg-wb-lightgray p-4 sm:p-8">
             <button
               disabled={!canBack()}
               className={`rounded-full border-2 border-wb-redorange bg-wb-redorange 
-              px-1 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red disabled:border-wb-lightgray2 disabled:bg-wb-lightgray2 disabled:text-wb-black`}
+              px-1 py-1 text-xs font-semibold text-wb-white hover:bg-wb-red disabled:border-wb-lightgray2 disabled:bg-wb-lightgray2 disabled:text-wb-black sm:text-sm`}
               onClick={goToPreviousPage}
             >
               <div className="flex">
                 <IconContext.Provider
                   value={{
-                    size: "20px",
+                    size: "18px",
                   }}
                 >
                   <div>
@@ -188,14 +188,14 @@ const Donation = () => {
             <button
               disabled={!canNext()}
               className={`rounded-full border-2 border-wb-redorange bg-wb-redorange 
-              px-1 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red disabled:border-wb-lightgray2 disabled:bg-wb-lightgray2 disabled:text-wb-black`}
+              px-1 py-1 text-xs font-semibold text-wb-white hover:bg-wb-red disabled:border-wb-lightgray2 disabled:bg-wb-lightgray2 disabled:text-wb-black sm:text-sm`}
               onClick={goToNextPage}
             >
               <div className="flex">
                 <p className="mr-1 pl-3">Berikutnya</p>
                 <IconContext.Provider
                   value={{
-                    size: "20px",
+                    size: "18px",
                   }}
                 >
                   <div>

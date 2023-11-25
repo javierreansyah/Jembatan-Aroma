@@ -40,7 +40,7 @@ const Home = ({ userType, handleNextPage }) => {
         <div className="md:py-32 lg:flex lg:h-screen lg:items-center lg:justify-between lg:gap-20">
           <div className="flex w-full items-center lg:pb-32">
             <div className="w-full">
-              <h1 className="md:max-w-xl/[72px] max-w-md text-4xl font-bold text-wb-orangeyellow md:text-5xl lg:max-w-2xl xl:text-6xl/[72px]">
+              <h1 className="md:max-w-xl/[72px] max-w-md text-3xl font-bold text-wb-orangeyellow sm:text-4xl md:text-5xl lg:max-w-2xl xl:text-6xl/[72px]">
                 Berbagi Bersama Kepada Yang Membutuhkan
               </h1>
               <p className="mt-4 max-w-md text-base text-wb-gray">
@@ -140,7 +140,7 @@ const Home = ({ userType, handleNextPage }) => {
         </div>
       </div>
 
-      <div className="relative flex h-80 w-full items-center justify-center overflow-clip bg-gradient-to-r from-wb-orangeyellow to-wb-redorange">
+      <div className="relative flex min-h-[300px] w-full items-center justify-center overflow-clip bg-gradient-to-r from-wb-orangeyellow to-wb-redorange">
         <div>
           <Elips className="absolute -left-16 -top-16  rotate-75 scale-125" />
           <Elips className="absolute -bottom-40 left-52 hidden rotate-15 scale-75 md:block" />
@@ -148,10 +148,10 @@ const Home = ({ userType, handleNextPage }) => {
           <Elips className="absolute -top-40 right-52 hidden rotate-90 scale-90 lg:block" />
         </div>
         <div className="container relative w-full p-12">
-          <h1 className="text-center text-4xl font-bold text-wb-white">
+          <h1 className="text-center text-3xl font-bold text-wb-white sm:text-4xl">
             "Donasikan Sekarang dan Buat Dunia Lebih Baik"
           </h1>
-          <p className="mt-2 text-center text-xl text-wb-white">
+          <p className="mt-2 text-center text-wb-white sm:text-xl">
             Donasimu memberikan manfaat kepada sesama dan juga turut merawat
             lingkungan
           </p>

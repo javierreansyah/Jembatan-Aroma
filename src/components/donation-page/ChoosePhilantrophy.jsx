@@ -13,11 +13,11 @@ const ChoosePhilantrophy = ({
   return (
     <div className={`${display ? "block" : "hidden"} w-full`}>
       {filteredOrgs.length === 0 ? (
-        <div className="h-fit rounded-3xl bg-wb-lightgray p-8 xl:w-full">
+        <div className="h-fit rounded-3xl bg-wb-lightgray p-6 sm:p-8 xl:w-full">
           <h1 className="text-3xl font-bold">Tidak Ada Yayasan</h1>
         </div>
       ) : (
-        <ul className="h-fit space-y-8 rounded-3xl bg-wb-lightgray p-8 xl:w-full">
+        <ul className="h-fit space-y-8 rounded-3xl bg-wb-lightgray p-6 sm:p-8 xl:w-full">
           {filteredOrgs.map((org, index) => (
             <li
               key={org.id}
@@ -37,7 +37,7 @@ const ChoosePhilantrophy = ({
                   <p>Halal: {org.halal}</p>
                 </div>
                 <button
-                  className="w-fit rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red"
+                  className="mt-2 w-fit rounded-full border-2 border-wb-redorange bg-wb-redorange px-4 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red"
                   onClick={() => handleChooseOrg(index)}
                 >
                   Pilih

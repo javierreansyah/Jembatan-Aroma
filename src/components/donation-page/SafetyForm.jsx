@@ -12,8 +12,10 @@ const SafetyForm = ({ display, handleNextPage }) => {
 
   return (
     <div className={`${display ? "block" : "hidden"}`}>
-      <div className="mb-8 h-fit w-full rounded-3xl bg-wb-lightgray p-8">
-        <h1 className="text-3xl font-bold text-wb-gray">Keamanan Makanan</h1>
+      <div className="mb-8 h-fit w-full rounded-3xl bg-wb-lightgray p-6 sm:p-8">
+        <h1 className="text-2xl font-bold text-wb-gray sm:text-3xl">
+          Keamanan Makanan
+        </h1>
         <hr className="my-4 w-full border-t border-gray-200" />
         <form onSubmit={handleNextPage}>
           <Clickable id="pisah" type="checkbox" label={labelSafety.pisah} />

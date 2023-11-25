@@ -25,18 +25,18 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar, userType, links }) => {
     >
       <div className="fixed right-0 z-50 h-screen w-3/4 border-l-2 border-wb-lightgray bg-wb-white">
         <div className="m-8">
-          <div className="my-4 flex justify-between pb-4">
+          <div className="my-4 flex items-center justify-between pb-4">
             <Link to="/" onClick={toggleSidebar}>
-              <img src={Logo} alt="Logo" className="h-8" />
+              <img src={Logo} alt="Logo" className="h-5 sm:h-8" />
             </Link>
             <button
-              className="flex items-center rounded-full border-2 border-wb-redorange px-4 py-1 text-sm font-semibold text-wb-redorange"
+              className="flex items-center rounded-full border-2 border-wb-redorange px-3 py-1 text-xs font-semibold text-wb-redorange sm:px-4 sm:text-sm"
               onClick={toggleSidebar}
             >
               <p className="mr-1">Tutup</p>
               <IconContext.Provider
                 value={{
-                  size: "20px",
+                  size: "18px",
                 }}
               >
                 <div>

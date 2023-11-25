@@ -99,7 +99,7 @@ const SupportCenter = () => {
 
         <div className="w-full">
           {currentPage === 1 && (
-            <div className="mb-8 h-fit w-full rounded-3xl bg-wb-lightgray p-8">
+            <div className="mb-8 h-fit w-full rounded-3xl bg-wb-lightgray p-6 sm:p-8">
               <h1 className="text-3xl font-bold text-wb-gray">FAQ</h1>
               <hr className="my-4 w-full border-t border-gray-200" />
               <h2 className="text-xl font-bold text-wb-gray">
@@ -167,19 +167,19 @@ const SupportCenter = () => {
             </div>
           )}
           {currentPage === 2 && (
-            <div className="mb-8 h-fit w-full rounded-3xl bg-wb-lightgray p-8">
-              <h1 className="text-3xl font-bold text-wb-gray">
+            <div className="mb-8 h-fit w-full rounded-3xl bg-wb-lightgray p-6 sm:p-8">
+              <h1 className="text-2xl font-bold text-wb-gray sm:text-3xl">
                 Hubungi Kontak Bantuan
               </h1>
               <hr className="my-4 w-full border-t border-gray-200" />
               <h2 className="my-3 text-xl font-bold text-wb-gray">Email</h2>
-              <div className="my-3 block w-full rounded-2xl bg-wb-lightgray2 px-6 py-3 font-normal text-wb-gray">
-                jembatanaroma@hotmail.com
+              <div className="my-3 block w-full rounded-2xl bg-wb-lightgray2 px-4 py-3 text-xs font-normal text-wb-gray sm:px-6 sm:text-base">
+                jembatanaroma@gmail.com
               </div>
               <h2 className="my-3 text-xl font-bold text-wb-gray">
                 Nomor Telepon
               </h2>
-              <div className="my-3 block w-full rounded-2xl bg-wb-lightgray2 px-6 py-3 font-normal text-wb-gray">
+              <div className="my-3 block w-full rounded-2xl bg-wb-lightgray2 px-4 py-3 text-xs font-normal text-wb-gray sm:px-6 sm:text-base">
                 0812 3456 7890
               </div>
             </div>

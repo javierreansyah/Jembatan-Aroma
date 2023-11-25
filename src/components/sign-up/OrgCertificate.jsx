@@ -23,8 +23,10 @@ const OrgCertificate = ({ display }) => {
 
   return (
     <div className={`${display ? "block" : "hidden"}`}>
-      <div className="mb-8 h-fit w-full rounded-2xl bg-wb-lightgray p-8">
-        <h1 className="text-3xl font-bold text-wb-gray">Sertifikat Lembaga</h1>
+      <div className="mb-8 h-fit w-full rounded-2xl bg-wb-lightgray p-6 sm:p-8">
+        <h1 className="text-2xl font-bold text-wb-gray sm:text-3xl">
+          Sertifikat Lembaga
+        </h1>
         <hr className="my-4 w-full border-t border-gray-200" />
         <form>
           <div className="my-3">

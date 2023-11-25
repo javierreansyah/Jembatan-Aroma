@@ -149,11 +149,13 @@ const OrgList = () => {
         </div>
         <div className="mb-8 w-full">
           {filteredOrgs.length === 0 ? (
-            <div className="h-fit rounded-3xl bg-wb-lightgray p-8 xl:w-full">
-              <h1 className="text-3xl font-bold">Tidak Ada Yayasan</h1>
+            <div className="h-fit rounded-3xl bg-wb-lightgray p-6 sm:p-8 xl:w-full">
+              <h1 className="text-2xl font-bold sm:text-3xl">
+                Tidak Ada Yayasan
+              </h1>
             </div>
           ) : (
-            <ul className="h-fit space-y-8 rounded-3xl bg-wb-lightgray p-8 xl:w-full">
+            <ul className="h-fit space-y-8 rounded-3xl bg-wb-lightgray p-6 sm:p-8 xl:w-full">
               {filteredOrgs.map((org) => (
                 <li
                   key={org.id}

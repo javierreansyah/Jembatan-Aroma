@@ -80,17 +80,17 @@ const SignUp = () => {
             handleNextPage={continuePage}
           />
 
-          <div className="flex h-fit w-full justify-between rounded-2xl bg-wb-lightgray p-8">
+          <div className="flex h-fit w-full justify-between rounded-2xl bg-wb-lightgray p-4 sm:p-8">
             <button
               disabled={!canBack()}
               className={`rounded-full border-2 border-wb-redorange bg-wb-redorange 
-              px-1 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red disabled:border-wb-lightgray2 disabled:bg-wb-lightgray2 disabled:text-wb-black`}
+              px-1 py-1 text-xs font-semibold text-wb-white hover:bg-wb-red disabled:border-wb-lightgray2 disabled:bg-wb-lightgray2 disabled:text-wb-black sm:text-sm`}
               onClick={goToPreviousPage}
             >
               <div className="flex">
                 <IconContext.Provider
                   value={{
-                    size: "20px",
+                    size: "18px",
                   }}
                 >
                   <div>
@@ -104,14 +104,14 @@ const SignUp = () => {
             <button
               disabled={!canNext()}
               className={`rounded-full border-2 border-wb-redorange bg-wb-redorange 
-                px-1 py-1 text-sm font-semibold text-wb-white hover:bg-wb-red disabled:border-wb-lightgray2 disabled:bg-wb-lightgray2 disabled:text-wb-black`}
+                px-1 py-1 text-xs font-semibold text-wb-white hover:bg-wb-red disabled:border-wb-lightgray2 disabled:bg-wb-lightgray2 disabled:text-wb-black sm:text-sm`}
               onClick={goToNextPage}
             >
               <div className="flex">
                 <p className="mr-1 pl-2">Berikutnya</p>
                 <IconContext.Provider
                   value={{
-                    size: "20px",
+                    size: "18px",
                   }}
                 >
                   <div>
