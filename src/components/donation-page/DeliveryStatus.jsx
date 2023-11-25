@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import orgData from "../../constants/orgData";
+import orgData from "../../constants/OrgData.js";
 import { Link } from "react-router-dom";
 
 const DeliveryStatus = ({ display, orgIndex, foodList }) => {
