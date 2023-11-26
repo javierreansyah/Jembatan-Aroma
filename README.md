@@ -9,11 +9,10 @@ You can visit this website with this domain:
 [Jembatan Aroma](https://jembatanaroma.vercel.app/)
 
 # Developers
-
-Haikal Thoriq Athaya
-Achmad Fauzi Aranda
-Javier Aahmes Reansyah
-Muhammad Herdi Adam
+- Haikal Thoriq Athaya
+- Achmad Fauzi Aranda
+- Javier Aahmes Reansyah
+- Muhammad Herdi Adam
 
 # Tech Stack
 - HTML, JavaScript
