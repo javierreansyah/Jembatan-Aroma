@@ -40,8 +40,8 @@ const Login = ({ setUserType }) => {
               <Input
                 id="email-username"
                 type="text"
-                placeholder="Username atau Password"
-                label="Username atau Password"
+                placeholder="Username atau Email"
+                label="Username atau Email"
                 value={usernameOrEmail}
                 handle={setUsernameOrEmail}
               />
@@ -55,7 +55,7 @@ const Login = ({ setUserType }) => {
               />
               <div>
                 {error && (
-                  <p className="text-wb-red">Username atau password salah!</p>
+                  <p className="text-wb-red">Username atau Email salah!</p>
                 )}
               </div>
               <div className="flex items-center justify-between">
