@@ -8,6 +8,16 @@ You can visit this website with this domain:
 
 [Jembatan Aroma](https://jembatanaroma.vercel.app/)
 
+
+Since only the front-end of our website has been implemented, authentication has not yet been set up. As a temporary measure, you can log in as a restaurant user with the following credentials:
+
+Username: restoran
+Password: restoran
+Similarly, you can log in as a charity foundation with these credentials:
+
+Username: yayasan
+Password: yayasan
+
 # Developers
 - Haikal Thoriq Athaya
 - Achmad Fauzi Aranda
